@@ -2,7 +2,7 @@
   <div class="wrapper">
     <el-container class="header">
       <el-header height="100" class="box">
-        <el-row>
+        <el-row style="width:100%;">
           <el-col :span="6" class="logo">
             <img src="../../../static/img/ic_logo.png">
           </el-col>
@@ -489,6 +489,7 @@ export default {
 .wrapper {
   width: 1920px;
   position: relative;
+  margin:0 auto;
 }
 /* 头部定位 */
 .header {
@@ -496,7 +497,6 @@ export default {
   background: #fff;
   position: fixed;
   z-index: 999;
-
   left: 0;
   top: 0;
 }
@@ -517,7 +517,6 @@ p {
 .footer-hth02 .runded-item p {
   padding-top: 5px;
   font-family: "MicrosoftYaHei";
-
   color: #666;
 }
 .footer-hth02 .runded-item .runded img {
