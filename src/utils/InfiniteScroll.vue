@@ -1,6 +1,6 @@
 <template>
   <div class="wrap-c">
-    <div class="box">
+    <div class="box1">
       <div class="content">
         <img src="../../static/img/il_scroll_img01.png" alt>
         <img src="../../static/img/il_scroll_img02.png" alt>
@@ -19,10 +19,7 @@
 </template>
 <script>
 export default {
-  data() {
-    return {};
-  },
-
+  name:"InfiniteScroll",
   mounted() {
     let speed = 10;
     let wrap = document.getElementsByClassName("wrap-c")[0];
@@ -68,12 +65,11 @@ img{
 }
 .wrap-c img {
  vertical-align:middle;
-
  display: block;
  float: left;
  border-right:1px solid #fff;
 }
-.wrap-c .box {
+.wrap-c .box1 {
    white-space: nowrap;
   float: left;
   width: 800%;

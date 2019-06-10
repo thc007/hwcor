@@ -1,36 +1,30 @@
 <template>
   <div class="wrapper">
     <el-container class="header">
-      <el-header height="100"  class="box">
+      <el-header height="100" class="box">
         <el-row>
-          <el-col :span="5" class="logo">
+          <el-col :span="6" class="logo">
             <img src="../../../static/img/ic_logo.png">
           </el-col>
-        <el-col :span="13">
-          <ul class="nav-box">
-            <li @click="scroll_detail">
-              公司简介
-              <!-- <a href="#hw_detail">公司简介</a> -->
-            </li>
-            <li @click="scroll_reject">
-             解决方案
-            </li>
-            <li @click="scroll_kills"> 
-             产品功能介绍
-            </li>
-            <li @click="scroll_footer">
-              社会价值
-            </li>
-          </ul>
-        </el-col>
-        <el-col :span="6">
-          <div class="header-right">
-            <div class="ic-phone">
-              <img src="../../../static/img/ic_phone.png" alt>服务热线 400-100-1313
+          <el-col :span="12">
+            <ul class="nav-box">
+              <li @click="scroll_detail">
+                公司简介
+                <!-- <a href="#hw_detail">公司简介</a> -->
+              </li>
+              <li @click="scroll_reject">解决方案</li>
+              <li @click="scroll_kills">产品功能介绍</li>
+              <li @click="scroll_footer">社会价值</li>
+            </ul>
+          </el-col>
+          <el-col :span="6">
+            <div class="header-right">
+              <div class="ic-phone">
+                <img src="../../../static/img/ic_phone.png" alt>服务热线 400-100-1313
+              </div>
             </div>
-          </div>
-        </el-col>
-      </el-row>
+          </el-col>
+        </el-row>
       </el-header>
     </el-container>
     <!-- 轮播图 -->
@@ -92,10 +86,13 @@
           <el-col :span="12">
             <div class="wrap">
               <div class="center txt-center">
-                  <el-image src="../../../static/img/logo.png" style="width:50%;height:50%;margin-top: 37px;
-    margin-bottom: -31px"   ></el-image>
-                  <br/>
-                <span>  人 · 车 · 位 · 生 活</span>
+                <el-image
+                  src="../../../static/img/logo.png"
+                  style="width:50%;height:50%;margin-top: 37px;
+    margin-bottom: -31px"
+                ></el-image>
+                <br>
+                <span>人 · 车 · 位 · 生 活</span>
               </div>
               <!-- 左下角为item1 -->
               <div class="item item1">预约充电</div>
@@ -122,7 +119,7 @@
         <InfiniteScroll></InfiniteScroll>
       </el-main>
     </el-container>
-    <div class=" txt-center" id="showsKills" style="width:100%;">
+    <div class="txt-center" id="showsKills" style="width:100%;">
       <el-row style="padding:20px 0;width:100%;">
         <div style="font: bold 40px arial ,MicrosoftYaHei; color:#2F2F2F; ">产品功能介绍</div>
         <div style="font: 20px arial,MicrosoftYaHei;color:#9E9E9E;">专业提供为停车位服务平台</div>
@@ -183,33 +180,33 @@
               </div>
             </div>
             <div class="fl" style="padding-left:30px;">
-            <div class="con-item txt-left">
-              <span>场内导航</span>
-              <p>
-                可视化的场内地图以及动态路线指引，让车
-                <br>主快速找到车位，提升停车效率
-              </p>
-            </div>
-            <div class="con-item txt-left">
-              <span>反向寻车</span>
-              <p>
-                车辆停入后，通过可视化的场内地图及动态
-                <br>路线指引，助车主快速找到爱车
-              </p>
-            </div>
-            <div class="con-item txt-left">
-              <span>无感支付</span>
-              <p>
-                车辆与账户绑定并开启自动支付，进出停车
-                <br>无需手动缴费，体验无感支付的便利
-              </p>
-            </div>
+              <div class="con-item txt-left">
+                <span>场内导航</span>
+                <p>
+                  可视化的场内地图以及动态路线指引，让车
+                  <br>主快速找到车位，提升停车效率
+                </p>
+              </div>
+              <div class="con-item txt-left">
+                <span>反向寻车</span>
+                <p>
+                  车辆停入后，通过可视化的场内地图及动态
+                  <br>路线指引，助车主快速找到爱车
+                </p>
+              </div>
+              <div class="con-item txt-left">
+                <span>无感支付</span>
+                <p>
+                  车辆与账户绑定并开启自动支付，进出停车
+                  <br>无需手动缴费，体验无感支付的便利
+                </p>
+              </div>
             </div>
           </el-col>
         </el-row>
       </div>
     </div>
-    <div class="footer-hth02" >
+    <div class="footer-hth02">
       <div class style="text-align:center;padding:50px 0 0 0;width:100%;">
         <div style="font: bold 40px arial ,MicrosoftYaHei; color:#2F2F2F; ">社会价值</div>
         <div style="font: 16px arial,MicrosoftYaHei;color:#9E9E9E;margin:0;">ET PROXY FEATURES</div>
@@ -276,72 +273,232 @@
         </p>
       </div>
     </div>
-  <el-container>
-    <el-footer class="footer" id="footer" style="padding:0;">
-      <img src="../../../static/img/last_img02.png" style="width:100%;" alt>
-      <div class="last-img">
-        <div style="font-size:33px;color:#fff;padding:20px 0;">APP下载</div>
-        <img src="../../../static/img/ic_app.png">
-      </div>
-    </el-footer>
-  </el-container>
+    <div class="footer" id="footer">
+      <el-row class="footer-top clearfix">
+        <div class="footer-left"></div>
+        <div class="footer-center"></div>
+        <div class="footer-right"></div>
+      </el-row>
+      <el-row class="footer-container">
+        <el-col class="container-left" :span="5">
+          <div class="title">联系我们</div>
+          <img src="../../../static/img/footer_left.png" alt>
+          <p>扫一扫关注公众号</p>
+        </el-col>
+        <el-col :span="14" class="contaier-center">
+          <el-row :gutter="60">
+            <el-col :span="12" class="left">
+              <div>
+                <span>深圳市豪位科技有限公司</span>
+              </div>
+              <div>
+                <span>400-100-1313</span>
+              </div>
+            </el-col>
+            <el-col :span="12" class="right">
+              <div>
+                <span>joy.jiang@hwcor.com</span>
+              </div>
+              <div>
+                <span>www.hwcor.com</span>
+              </div>
+            </el-col>
+          </el-row>
+          <el-col class="con-center-bt">
+            <div>
+              <span>深圳市南山区深圳湾科技生态园二区9栋A2409～A2414</span>
+            </div>
+          </el-col>
+        </el-col>
+        <el-col :span="5">
+          <div class="title">APP下载</div>
+          <img src="../../../static/img/logo_app.png" style="width:178px;hieght:178px;" alt>
+        </el-col>
+      </el-row>
+      <el-row class="footer-bottom">© 2019 Shenzhen Haowei Technology Co.,Ltd.All rights reserved</el-row>
+    </div>
   </div>
 </template>
 <script>
 import InfiniteScroll from "../../utils/InfiniteScroll";
 export default {
-  data() {
-    return {};
-  },
-  methods:{
-    scroll_detail(){
-     window.scrollTo({ 
-       top: 700, 
-      behavior: "smooth" 
+  name: "index",
+
+  methods: {
+    scroll_detail() {
+      window.scrollTo({
+        top: 700,
+        behavior: "smooth"
       });
     },
-    scroll_reject(){
-      window.scrollTo({ 
-      top: 1300, 
-      behavior: "smooth" 
+    scroll_reject() {
+      window.scrollTo({
+        top: 1300,
+        behavior: "smooth"
       });
     },
-    scroll_kills(){
-      window.scrollTo({ 
-      top: 2570, 
-      behavior: "smooth" 
+    scroll_kills() {
+      window.scrollTo({
+        top: 2570,
+        behavior: "smooth"
       });
     },
-    scroll_footer(){
-      window.scrollTo({ 
-      top: 3600, 
-      behavior: "smooth" 
+    scroll_footer() {
+      window.scrollTo({
+        top: 3600,
+        behavior: "smooth"
       });
     }
   },
   components: {
     InfiniteScroll
-  },
-  mounted(){
-       
   }
 };
 </script>
 <style scoped>
-.wrapper{
-  width:1920px;
-  position: relative;
-/* 头部定位 */
-
+/* 页脚 */
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  color: #8997a4;
+  padding: 30px 20px;
 }
-.header{
-  width:100%;
-  background:#fff;
-  position: fixed; 
- z-index: 999;
- 
- left:0;
- top:0;
+.footer-container {
+  padding-left: 223px;
+}
+.footer-container .contaier-center {
+  padding: 30px 0;
+  font-size: 16px;
+}
+.con-center-bt div {
+  display: inline;
+}
+.con-center-bt {
+  width: 100%;
+  border-bottom: 1px solid #384453;
+  padding-top: 30px;
+  color: #fff;
+}
+.con-center-bt:before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 23px;
+  background: url(../../../static/img/ic_position.png) no-repeat;
+}
+.footer-container .contaier-center .left div:first-of-type:before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 23px;
+  background: url(../../../static/img/ic_city.png) no-repeat;
+}
+.footer-container .contaier-center .left div:last-of-type:before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 23px;
+  background: url(../../../static/img/ic_mobile.png) no-repeat;
+}
+.footer-container .contaier-center .right div:first-of-type:before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 23px;
+  background: url(../../../static/img/ic_email.png) no-repeat;
+}
+.footer-container .contaier-center .right div:last-of-type:before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 23px;
+  background: url(../../../static/img/ic_website.png) no-repeat;
+}
+
+.footer-container .contaier-center div div span {
+  display: inline-block;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  line-height: 20px;
+}
+.footer-container .contaier-center .left div {
+  border-bottom: 1px solid #384453;
+  width: 405px;
+  /* padding-bottom:10px; */
+  padding-top: 30px;
+  color: #fff;
+}
+.footer-container .contaier-center .right div {
+  border-bottom: 1px solid #384453;
+  width: 405px;
+  padding-top: 30px;
+  color: #fff;
+}
+.footer-container .title {
+  font-size: 38px;
+  color: #fff;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+.footer-container .container-left p {
+  width: 178px;
+  padding-top: 15px;
+  text-align: center;
+  color: #85929f;
+  font-size: 14px;
+}
+#footer {
+  box-sizing: border-box;
+  padding: 93px 0;
+  width: 100%;
+  height: 795px;
+  background: url(../../../static/img/footer_img.png) no-repeat;
+}
+.footer-top {
+  width: 100%;
+  height: 300px;
+  box-sizing: border-box;
+  padding: 0 190px;
+}
+.footer-top > div {
+  float: left;
+}
+.footer-top .footer-left {
+  margin-top: 67px;
+  width: 709px;
+  height: 1px;
+  background: linear-gradient(361deg, #313e4d, #525c67);
+}
+.footer-top .footer-right {
+  margin-top: 67px;
+  width: 693px;
+  height: 1px;
+  background: linear-gradient(361deg, #525c67, #313e4d);
+}
+
+.footer-top .footer-center {
+  width: 135px;
+  height: 135px;
+  background: url(../../../static/img/logo.png) no-repeat;
+  border-radius: 50%;
+  border: 1px solid #525c67;
+  background-position: center center;
+  background-size: 98px 88px;
+}
+/* 最外层包裹 */
+.wrapper {
+  width: 1920px;
+  position: relative;
+}
+/* 头部定位 */
+.header {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  z-index: 999;
+
+  left: 0;
+  top: 0;
 }
 /* .header{
   width:1200px;
@@ -349,7 +506,7 @@ export default {
 	padding:0;
  
  } */
-.fl{
+.fl {
   float: left;
 }
 p {
@@ -437,8 +594,8 @@ p {
 }
 .footer .last-img {
   position: absolute;
-    right: 10%;
-    top: 535%;
+  right: 10%;
+  top: 535%;
 }
 .footer .last-img img {
   width: 66%;
@@ -521,7 +678,7 @@ li {
   line-height: 100px;
   font-size: 18px;
   color: #0e83f1;
-  
+
   padding: 0 10px;
   font-weight: bold;
 }
@@ -531,16 +688,16 @@ li {
   box-sizing: border-box;
   /* display: flex; */
 }
-.nav-box li a {
-  color: #333333;
-  text-decoration: none;
+.nav-box li:hover {
+  background: #ccc;
 }
 .nav-box li {
-  padding-left: 48px;
+  padding: 0 24px;
   float: left;
   height: 100px;
   line-height: 100px;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .box {
@@ -571,10 +728,10 @@ li {
   height: 276px;
   /* line-height: 276px; */
   box-sizing: border-box;
-  font-weight:700;
+  font-weight: 700;
   font-family: FZZDHJW--GB1-0;
-  font-size:28px;
-  color: #3080FF;
+  font-size: 28px;
+  color: #3080ff;
   border-radius: 50%;
   border: 1px solid #d8edf4;
   box-shadow: 0px 0px 59px #9dd3e8;
@@ -585,7 +742,7 @@ li {
   height: 139px;
   border-radius: 50%;
   line-height: 139px;
-  font-size:20px;
+  font-size: 20px;
   text-align: center;
   color: #ffffff;
 
