@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper" style="margin:0px auto;">
     <el-container class="header">
       <el-header height="100" class="box">
         <el-row style="width:100%;">
@@ -47,15 +47,14 @@
             <img src="../../../static/img/hw_detail.png" style="width:517px; height:414px;">
           </el-col>
           <el-col :span="12">
-            <br>
 
             <p>
               深圳市豪位科技有限公司公司本着为人民停车服务的宗旨，响应国家发改委的号召，积极参与建设和运营停车资源，推动停车智能化信息化。
-              公司总部座落于深圳市南山区，是一家深耕于共享停车垂直领域的互联网企业。创始团队拥有原世界500强企业高管、全球名校毕业海归硕士博士、停车行业市场精英、以及原华为、电信、富士康等知名企业的资深通信领域技术专家。室内导航技术在国内国际领先，已获10多项专利、6项软著。
-            </p>
-            <p>公司技术团队经过数年的自主研发，利用人车位智能协同系统，运用大数据驱动的深度学习技术，完美实现了停车管理信息系统的互联互通。这套人·车·位智联互通平台，主要包含停车位预约、充电桩预约两大功能，平台还在拓展，相信会给用户不断带来更贴心更周到的停车服务体验。</p>
-            <p>除深圳总部外，公司在上海、广州、重庆、成都均布局了市场运营团队。公司将陆续签约超过1万家停车场资源，车位500万个以上。</p>
-            <p>公司注册商标“人·车·位”，意誉着为人们提供更便利的停车位预约服务，致力于以共享经济实践响应中国“互联网+”的创新战略，解决中国的交通停车和环保挑战，提升用户停车体验，创造社会价值，建设高效、可持续的移动出行新生态</p>
+              公司总部座落于深圳市南山区，是一家深耕于共享停车垂直领域的互联网企业。创始团队拥有原世界500强企业高管、全球名校毕业海归硕士博士、停车行业市场精英、以及原华为、电信、富士康等知名企业的资深通信领域技术专家。室内导航技术在国内国际领先，已获10多项专利、6项软著。<br/>
+          
+            公司技术团队经过数年的自主研发，利用人车位智能协同系统，运用大数据驱动的深度学习技术，完美实现了停车管理信息系统的互联互通。这套人·车·位智联互通平台，主要包含停车位预约、充电桩预约两大功能，平台还在拓展，相信会给用户不断带来更贴心更周到的停车服务体验。<br/>
+           除深圳总部外，公司在上海、广州、重庆、成都均布局了市场运营团队。公司将陆续签约超过1万家停车场资源，车位500万个以上。<br/>
+            公司注册商标“人·车·位”，意誉着为人们提供更便利的停车位预约服务，致力于以共享经济实践响应中国“互联网+”的创新战略，解决中国的交通停车和环保挑战，提升用户停车体验，创造社会价值，建设高效、可持续的移动出行新生态</p>
           </el-col>
         </el-row>
       </div>
@@ -70,14 +69,14 @@
             <br>
             <br>
             <div style="width:100%;color:#717171; ">
-              <p style="width:70%;color:#717171; ">
+              <p id="overflow-p1" style="width:70%;color:#717171; ">
                 人车位生活APP提供停车位预约、充电桩预约服务。手机可以直接快捷语音预约车位。室外导航至停车场后，
                 自动切换至蓝牙链接模式，精准导航至具体车位的位置。基于GIS地理信息技术的室内导航系统，
                 采用国际领先的路网规划算法，可以精准实现室内导航找位及反向寻车，真正解决用户寻车找位的痛点需求。
                 该技术在国内国际领先，已获10多项专利、6项软著，用户体验非常好。
-              </p>
+          
               <br>
-              <p style="width:70%;color:#717171; ">
+            
                 豪位科技通过自主研发搭建的人·车·位云服务平台系统，完美的实现了自动计费、预约、支付、室内导航、自动解锁等功能全自动化，
                 极大的提高了停车位和充电桩资源的利用率，真正实现人·车·位·生活互联互通。
               </p>
@@ -356,6 +355,7 @@ export default {
 };
 </script>
 <style scoped>
+
 /* 页脚 */
 .footer-bottom {
   width: 100%;
@@ -489,7 +489,7 @@ export default {
 .wrapper {
   width: 1920px;
   position: relative;
-  margin:0 auto;
+  margin:0px auto;
 }
 /* 头部定位 */
 .header {
@@ -512,6 +512,7 @@ export default {
 p {
   font-size: 16px;
   color: #333;
+
 }
 
 .footer-hth02 .runded-item p {
@@ -784,6 +785,120 @@ li {
   transform: translateX(50%);
   background: linear-gradient(45deg, #ee727d, #fda23f);
   box-shadow: 1px 10px 10px 0px #f17d6f52;
+}
+/* 媒体查询 */
+@media screen and (max-width: 1200px){
+    .nav-box li{
+  
+    padding: 0 15px
+  }
+
+  .ic-phone{
+    padding: 0;
+  }
+  #overflow-p1{
+    width: 443px;
+     overflow: hidden;
+    height:320px;
+  }
+   #hw_detail p{
+     width:615px;
+     height:380px;
+     text-overflow: ellipsis;
+   }
+  #hw_detail{
+    overflow: hidden;
+  }
+
+}
+@media all
+and (-moz-min-device-pixel-ratio: 0.5) and (-moz-max-device-pixel-ratio: 0.5),
+  (-webkit-min-device-pixel-ratio: 0.5) and (-webkit-max-device-pixel-ratio: 0.5),
+  (min-resolution: 0.5dppx) and (max-resolution: 0.5dppx) {
+  :root {
+      font-size: 14px;
+  }
+  #hw_detail{
+    overflow: hidden;
+  }
+   #overflow-p1{
+    width: 443px;
+     overflow: hidden;
+    height:320px;
+  }
+  .nav-box li{
+    font-size:14px;
+    padding: 0 15px
+  }
+  p{
+   font-size:12px;
+    
+  }
+  .ic-phone{
+    font-size:12px;
+    padding: 0;
+  }
+  .box{
+    width:1440px;
+  }
+   #hw_detail p{
+     width:615px;
+     height:380px;
+     text-overflow: ellipsis;
+   }
+
+
+}
+@media all
+and (-moz-min-device-pixel-ratio: 1.09) and (-moz-max-device-pixel-ratio: 1.18),
+  (-webkit-min-device-pixel-ratio: 1.09) and (-webkit-max-device-pixel-ratio: 1.18),
+  (min-resolution: 1.09dppx) and (max-resolution: 1.18dppx) {
+  :root {
+      font-size: 14px;
+  }
+}
+@media all
+and (-moz-min-device-pixel-ratio: 1.19) and (-moz-max-device-pixel-ratio: 1.28),
+  (-webkit-min-device-pixel-ratio: 1.19) and (-webkit-max-device-pixel-ratio: 1.28),
+  (min-resolution: 1.19dppx) and (max-resolution: 1.28dppx) {
+  :root {
+      font-size: 13px;
+  }
+}
+@media all
+and (-moz-min-device-pixel-ratio: 1.29) and (-moz-max-device-pixel-ratio: 1.4),
+  (-webkit-min-device-pixel-ratio: 1.29) and (-webkit-max-device-pixel-ratio: 1.4),
+  (min-resolution: 1.29dppx) and (max-resolution: 1.4dppx) {
+  :root {
+      font-size: 12px;
+  }
+}
+@media all
+and (-moz-min-device-pixel-ratio: 1.41) and (-moz-max-device-pixel-ratio: 1.6),
+  (-webkit-min-device-pixel-ratio: 1.41) and (-webkit-max-device-pixel-ratio: 1.6),
+  (min-resolution: 1.41dppx) and (max-resolution: 1.6dppx) {
+  :root {
+    background:pink;
+      font-size: 10px;
+  }
+}
+@media all
+and (-moz-min-device-pixel-ratio: 1.61) and (-moz-max-device-pixel-ratio: 1.8),
+  (-webkit-min-device-pixel-ratio: 1.61) and (-webkit-max-device-pixel-ratio: 1.8),
+  (min-resolution: 1.61dppx) and (max-resolution: 1.8dppx) {
+  :root {
+      font-size: 9px;
+
+      background:blue;
+  }
+}
+@media all
+and (-moz-min-device-pixel-ratio: 1.81) and (-moz-max-device-pixel-ratio: 2.1),
+  (-webkit-min-device-pixel-ratio: 1.81) and (-webkit-max-device-pixel-ratio: 2.1),
+  (min-resolution: 1.81dppx) and (max-resolution: 2.1dppx) {
+  :root {
+      font-size: 8px;
+  }
 }
 </style>
 
