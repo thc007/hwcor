@@ -318,7 +318,8 @@
           <img src="../../../static/img/logo_app.png" style="width:178px;hieght:178px;" alt>
         </el-col>
       </el-row>
-      <el-row class="footer-bottom">© 2019 Shenzhen Haowei Technology Co.,Ltd.All rights reserved</el-row>
+      <el-row class="footer-bottom">© 2019 Shenzhen Haowei Technology Co.,Ltd.All rights reserved<br/><br/>粤ICP备19046392号 </el-row>
+      
     </div>
   </div>
 </template>
