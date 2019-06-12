@@ -6,7 +6,7 @@
           <el-col :span="6" class="logo">
             <img src="../../../static/img/ic_logo.png">
           </el-col>
-          <el-col :span="12">
+          <el-col :span="18">
             <ul class="nav-box">
               <li @click="scroll_detail">
                 公司简介
@@ -15,15 +15,16 @@
               <li @click="scroll_reject">解决方案</li>
               <li @click="scroll_kills">产品功能介绍</li>
               <li @click="scroll_footer">社会价值</li>
+              <li @click="Contact_Us">联系我们</li>
             </ul>
           </el-col>
-          <el-col :span="6">
+          <!-- <el-col :span="6">
             <div class="header-right">
               <div class="ic-phone">
                 <img src="../../../static/img/ic_phone.png" alt>服务热线 400-100-1313
               </div>
             </div>
-          </el-col>
+          </el-col> -->
         </el-row>
       </el-header>
     </el-container>
@@ -37,29 +38,28 @@
         <img src="../../../static/img/imgc.jpg" alt>
       </el-carousel-item>
     </el-carousel>
-    <div
-      class="clearfix"
-      style="background:#F7F9FC;height:682px;padding:137px 0;box-sizing:border-box;"
-    >
-      <div class="box" id="hw_detail">
+    <div class="clearfix" id="hw-detail">
+      <div class="box">
         <el-row :gutter="20">
           <el-col :span="12">
-            <img src="../../../static/img/hw_detail.png" style="width:517px; height:414px;">
+            <img src="../../../static/img/hw_detail.png" style="width:100%; height:100%;float: right">
           </el-col>
           <el-col :span="12">
 
             <p>
               深圳市豪位科技有限公司公司本着为人民停车服务的宗旨，响应国家发改委的号召，积极参与建设和运营停车资源，推动停车智能化信息化。
               公司总部座落于深圳市南山区，是一家深耕于共享停车垂直领域的互联网企业。创始团队拥有原世界500强企业高管、全球名校毕业海归硕士博士、停车行业市场精英、以及原华为、电信、富士康等知名企业的资深通信领域技术专家。室内导航技术在国内国际领先，已获10多项专利、6项软著。<br/>
-          
+         
             公司技术团队经过数年的自主研发，利用人车位智能协同系统，运用大数据驱动的深度学习技术，完美实现了停车管理信息系统的互联互通。这套人·车·位智联互通平台，主要包含停车位预约、充电桩预约两大功能，平台还在拓展，相信会给用户不断带来更贴心更周到的停车服务体验。<br/>
            除深圳总部外，公司在上海、广州、重庆、成都均布局了市场运营团队。公司将陆续签约超过1万家停车场资源，车位500万个以上。<br/>
+           
             公司注册商标“人·车·位”，意誉着为人们提供更便利的停车位预约服务，致力于以共享经济实践响应中国“互联网+”的创新战略，解决中国的交通停车和环保挑战，提升用户停车体验，创造社会价值，建设高效、可持续的移动出行新生态</p>
           </el-col>
         </el-row>
       </div>
+      <div class="triangle"></div>
     </div>
-    <div class="clearfix" style="box-sizing:box-border;height:400pt;">
+    <div class="clearfix" style="box-sizing:box-border;height:400pt;padding-top:70px;">
       <div class="box" id="reject">
         <el-row :gutter="20" style="height:400pt;">
           <el-col :span="12">
@@ -67,29 +67,29 @@
             <br>
             <h4 style="color:#666;font-weight:700; font-size: 40px ;">解决方案</h4>
             <br>
-            <br>
-            <div style="width:100%;color:#717171; ">
-              <p id="overflow-p1" style="width:70%;color:#717171; ">
+    
+            <div style="width:100%;color:#717171;padding-top:10px; ">
+              <p id="overflow-p1" style="width:80%;color:#717171; ">
                 人车位生活APP提供停车位预约、充电桩预约服务。手机可以直接快捷语音预约车位。室外导航至停车场后，
                 自动切换至蓝牙链接模式，精准导航至具体车位的位置。基于GIS地理信息技术的室内导航系统，
                 采用国际领先的路网规划算法，可以精准实现室内导航找位及反向寻车，真正解决用户寻车找位的痛点需求。
                 该技术在国内国际领先，已获10多项专利、6项软著，用户体验非常好。
           
-              <br>
+              <br/>
             
                 豪位科技通过自主研发搭建的人·车·位云服务平台系统，完美的实现了自动计费、预约、支付、室内导航、自动解锁等功能全自动化，
-                极大的提高了停车位和充电桩资源的利用率，真正实现人·车·位·生活互联互通。
+                极大的提高了停车位和充电桩资源的利用率，真正实现人·车·位·生活互联互通
               </p>
             </div>
           </el-col>
           <el-col :span="12">
             <div class="wrap">
               <div class="center txt-center">
-                <el-image
+                <img
                   src="../../../static/img/logo.png"
                   style="width:50%;height:50%;margin-top: 37px;
     margin-bottom: -31px"
-                ></el-image>
+                />
                 <br>
                 <span>人 · 车 · 位 · 生 活</span>
               </div>
@@ -118,12 +118,14 @@
         <InfiniteScroll></InfiniteScroll>
       </el-main>
     </el-container>
+
     <div class="txt-center" id="showsKills" style="width:100%;">
       <el-row style="padding:20px 0;width:100%;">
         <div style="font: bold 40px arial ,MicrosoftYaHei; color:#2F2F2F; ">产品功能介绍</div>
         <div style="font: 20px arial,MicrosoftYaHei;color:#9E9E9E;">专业提供为停车位服务平台</div>
       </el-row>
     </div>
+
     <div class="container">
       <div class="box">
         <el-row>
@@ -205,6 +207,7 @@
         </el-row>
       </div>
     </div>
+
     <div class="footer-hth02">
       <div class style="text-align:center;padding:50px 0 0 0;width:100%;">
         <div style="font: bold 40px arial ,MicrosoftYaHei; color:#2F2F2F; ">社会价值</div>
@@ -273,11 +276,12 @@
       </div>
     </div>
     <div class="footer" id="footer">
-      <el-row class="footer-top clearfix">
+      <!-- <el-row class="footer-top clearfix">
         <div class="footer-left"></div>
         <div class="footer-center"></div>
         <div class="footer-right"></div>
-      </el-row>
+      </el-row> -->
+      <FooterCssCirc></FooterCssCirc>
       <el-row class="footer-container">
         <el-col class="container-left" :span="5">
           <div class="title">联系我们</div>
@@ -319,38 +323,31 @@
   </div>
 </template>
 <script>
+import FooterCssCirc from "../../utils/FooterCssCirc"
 import InfiniteScroll from "../../utils/InfiniteScroll";
 export default {
   name: "index",
 
   methods: {
     scroll_detail() {
-      window.scrollTo({
-        top: 700,
-        behavior: "smooth"
-      });
+     window.scrollTo(0,400)
     },
     scroll_reject() {
-      window.scrollTo({
-        top: 1300,
-        behavior: "smooth"
-      });
+    window.scrollTo(0,1400)
     },
     scroll_kills() {
-      window.scrollTo({
-        top: 2570,
-        behavior: "smooth"
-      });
+    window.scrollTo(0,2600)
     },
     scroll_footer() {
-      window.scrollTo({
-        top: 3600,
-        behavior: "smooth"
-      });
-    }
+     window.scrollTo(0,3650)
+    },
+    Contact_Us(){
+     window.scrollTo(0,5000)
+    }   
   },
   components: {
-    InfiniteScroll
+    InfiniteScroll,
+    FooterCssCirc
   }
 };
 </script>
@@ -451,12 +448,13 @@ export default {
   box-sizing: border-box;
   padding: 93px 0;
   width: 100%;
-  height: 795px;
-  background: url(../../../static/img/footer_img.png) no-repeat;
+  height: 515px;
+  background:#273341;
+  /* background: url(../../../static/img/footer_img.png) no-repeat; */
 }
 .footer-top {
   width: 100%;
-  height: 300px;
+  height: 200px;
   box-sizing: border-box;
   padding: 0 190px;
 }
@@ -490,6 +488,7 @@ export default {
   width: 1920px;
   position: relative;
   margin:0px auto;
+  font-family: "Microsoft YaHei";
 }
 /* 头部定位 */
 .header {
@@ -512,7 +511,10 @@ export default {
 p {
   font-size: 16px;
   color: #333;
-
+  line-height: 30px;
+}
+li ,span,div{
+  font-family:"Microsoft YaHei";
 }
 
 .footer-hth02 .runded-item p {
@@ -624,9 +626,7 @@ li {
   display: table;
   clear: both;
 }
-.el-carousel--horizontal {
-  /* overflow-x:visible; */
-}
+
 .list-img {
   width: 100%;
   float: right;
@@ -665,10 +665,11 @@ li {
 /* 头部样式 */
 .header-right {
   box-sizing: border-box;
-  /* padding: 15px 0; */
+  text-align:right;
   height: 100px;
   line-height: 100px;
 }
+
 .ic-phone img {
   width: 15px;
   height: 15px;
@@ -686,14 +687,14 @@ li {
   width: 100%;
   height: 100px;
   box-sizing: border-box;
-  /* display: flex; */
+  display: flex;
+  justify-content: space-between;
 }
 .nav-box li:hover {
   background: #ccc;
 }
 .nav-box li {
-  padding: 0 24px;
-  float: left;
+
   height: 100px;
   line-height: 100px;
   font-size: 20px;
@@ -734,7 +735,7 @@ li {
   color: #3080ff;
   border-radius: 50%;
   border: 1px solid #d8edf4;
-  box-shadow: 0px 0px 59px #9dd3e8;
+  box-shadow: 0px 0px 59px #d0eefa;
 }
 .item {
   position: absolute;
@@ -786,8 +787,15 @@ li {
   background: linear-gradient(45deg, #ee727d, #fda23f);
   box-shadow: 1px 10px 10px 0px #f17d6f52;
 }
+  #hw-detail{
+    height: 682px; 
+    box-sizing: border-box;
+    padding: 6% 0px;
+    background:#f7f9fc;
+  }
+
 /* 媒体查询 */
-@media screen and (max-width: 1200px){
+/* @media screen and (max-width: 1200px){
     .nav-box li{
   
     padding: 0 15px
@@ -801,55 +809,57 @@ li {
      overflow: hidden;
     height:320px;
   }
-   #hw_detail p{
+   #hw-detail p{
      width:615px;
      height:380px;
      text-overflow: ellipsis;
    }
-  #hw_detail{
-    overflow: hidden;
-  }
 
-}
-@media all
+} */
+  #hw-detail .triangle{
+    position: absolute;
+    left:47.5%;
+    bottom:0px;
+    border:35px solid #fff;
+    border-top:none;
+    border-left-color:#f7f9fc;
+    border-right-color:#f7f9fc;
+  }
+  #hw-detail{
+    position:relative;
+  }
+ @media all
 and (-moz-min-device-pixel-ratio: 0.5) and (-moz-max-device-pixel-ratio: 0.5),
   (-webkit-min-device-pixel-ratio: 0.5) and (-webkit-max-device-pixel-ratio: 0.5),
   (min-resolution: 0.5dppx) and (max-resolution: 0.5dppx) {
   :root {
       font-size: 14px;
   }
-  #hw_detail{
-    overflow: hidden;
-  }
-   #overflow-p1{
+
+  #overflow-p1{
     width: 443px;
-     overflow: hidden;
-    height:320px;
-  }
+    overflow: hidden;
+    height:400px;
+  } 
   .nav-box li{
     font-size:14px;
     padding: 0 15px
   }
-  p{
-   font-size:12px;
-    
-  }
   .ic-phone{
-    font-size:12px;
     padding: 0;
   }
   .box{
     width:1440px;
   }
+ 
    #hw_detail p{
-     width:615px;
-     height:380px;
-     text-overflow: ellipsis;
+     line-height: 30px;
+   
    }
 
 
-}
-@media all
+} 
+/* @media all
 and (-moz-min-device-pixel-ratio: 1.09) and (-moz-max-device-pixel-ratio: 1.18),
   (-webkit-min-device-pixel-ratio: 1.09) and (-webkit-max-device-pixel-ratio: 1.18),
   (min-resolution: 1.09dppx) and (max-resolution: 1.18dppx) {
@@ -899,6 +909,6 @@ and (-moz-min-device-pixel-ratio: 1.81) and (-moz-max-device-pixel-ratio: 2.1),
   :root {
       font-size: 8px;
   }
-}
+} */
 </style>
 
