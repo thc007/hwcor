@@ -7,11 +7,6 @@
         <img src="../../static/img/il_scroll_img03.png" alt>
         <img src="../../static/img/il_scroll_img04.png" alt>
         <img src="../../static/img/il_scroll_img05.png" alt>
-        <img src="../../static/img/il_scroll_img01.png" alt>
-        <img src="../../static/img/il_scroll_img02.png" alt>
-        <img src="../../static/img/il_scroll_img03.png" alt>
-        <img src="../../static/img/il_scroll_img04.png" alt>
-        <img src="../../static/img/il_scroll_img05.png" alt>
       </div>
       <div class="clone"></div>
     </div>
@@ -35,8 +30,6 @@ export default {
         }
       else {
         wrap.scrollLeft++;
-           
-        
       }
     }
     var MyMar = setInterval(Marquee, 10);

@@ -169,7 +169,7 @@
             >
           </el-col>
           <el-col :span="8">
-            <div class="fl">
+            <div class="fl"  style="    padding-top: 5px;padding-left:-4px">
               <div class="img-item">
                 <img src="../../../static/img/ic_navigation.png" alt>
               </div>
@@ -184,8 +184,8 @@
               <div class="con-item txt-left">
                 <span>场内导航</span>
                 <p>
-                  可视化的场内地图以及动态路线指引，让车
-                  <br>主快速找到车位，提升停车效率
+                  可视化的场内地图以及动态路线指引，<br>让车
+                  主快速找到车位，提升停车效率
                 </p>
               </div>
               <div class="con-item txt-left">
@@ -309,7 +309,7 @@
           </el-row>
           <el-col class="con-center-bt">
             <div>
-              <span>深圳市南山区深圳湾科技生态园二区9栋A2409～A2414</span>
+              <span>深圳市南山区深圳湾科技生态园二区9栋A2座24楼2409～2414</span>
             </div>
           </el-col>
         </el-col>
@@ -319,7 +319,6 @@
         </el-col>
       </el-row>
       <el-row class="footer-bottom">© 2019 Shenzhen Haowei Technology Co.,Ltd.All rights reserved<br/><br/>粤ICP备19046392号 </el-row>
-      
     </div>
   </div>
 </template>
@@ -642,7 +641,7 @@ li {
   /* background: #a9a9a9; */
 }
 .img-item {
-  padding-bottom: 118px;
+  padding-bottom: 120px;
 }
 .con-item {
   width: 291px;
