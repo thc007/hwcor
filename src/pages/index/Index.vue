@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" style="margin:0px auto;">
+  <div class="wrapper">
     <el-container class="header">
       <el-header height="100" class="box">
         <el-row style="width:100%;">
@@ -7,24 +7,17 @@
             <img src="../../../static/img/ic_logo.png">
           </el-col>
           <el-col :span="18">
-            <ul class="nav-box">
-              <li @click="scroll_detail">
+            <el-row class="nav-box">
+              <el-col :span="4.8" @click="scroll_detail">
                 公司简介
                 <!-- <a href="#hw_detail">公司简介</a> -->
-              </li>
-              <li @click="scroll_reject">解决方案</li>
-              <li @click="scroll_kills">产品功能介绍</li>
-              <li @click="scroll_footer">社会价值</li>
-              <li @click="Contact_Us">联系我们</li>
-            </ul>
+              </el-col>
+              <el-col :span="4.8" @click="scroll_reject">解决方案</el-col>
+              <el-col :span="4.8" @click="scroll_kills">产品功能介绍</el-col>
+              <el-col :span="4.8" @click="scroll_footer">社会价值</el-col>
+              <el-col :span="4.8" @click="Contact_Us">联系我们</el-col>
+            </el-row>
           </el-col>
-          <!-- <el-col :span="6">
-            <div class="header-right">
-              <div class="ic-phone">
-                <img src="../../../static/img/ic_phone.png" alt>服务热线 400-100-1313
-              </div>
-            </div>
-          </el-col> -->
         </el-row>
       </el-header>
     </el-container>
@@ -492,7 +485,7 @@ export default {
 }
 /* 头部定位 */
 .header {
-  width: 100%;
+  width: 1920px;
   background: #fff;
   position: fixed;
   z-index: 999;
@@ -690,10 +683,10 @@ li {
   display: flex;
   justify-content: space-between;
 }
-.nav-box li:hover {
+.nav-box div:hover {
   background: #ccc;
 }
-.nav-box li {
+.nav-box div {
 
   height: 100px;
   line-height: 100px;
@@ -793,8 +786,35 @@ li {
     padding: 6% 0px;
     background:#f7f9fc;
   }
+ @media screen and (max-width: 1200px){
+	 .wrapper,.header{
+		 width:1200px;
+	 }
+	 .box{
+		 width:1000px;
+		 margin:0;
+	 }
+    .nav-box div{
+  
+			padding: 0 15px
+		}	
 
+  .ic-phone{
+    padding: 0;
+  }
+  #overflow-p1{
+    width: 443px;
+     overflow: hidden;
+    height:320px;
+  }
+   #hw-detail p{
+     width:615px;
+     height:380px;
+     text-overflow: ellipsis;
+   }
+	}
 /* 媒体查询 */
+
 /* @media screen and (max-width: 1200px){
     .nav-box li{
   
@@ -841,7 +861,7 @@ and (-moz-min-device-pixel-ratio: 0.5) and (-moz-max-device-pixel-ratio: 0.5),
     overflow: hidden;
     height:400px;
   } 
-  .nav-box li{
+  .nav-box div{
     font-size:14px;
     padding: 0 15px
   }
