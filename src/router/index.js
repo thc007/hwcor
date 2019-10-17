@@ -8,7 +8,6 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Index',
       component: resolve=>require(["@/pages/index/Index"],resolve)
     },
     {

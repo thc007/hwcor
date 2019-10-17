@@ -1,52 +1,78 @@
 <template>
   <div class="wrapper">
     <el-container class="header">
-      <el-header height="100" class="box">
-        <el-row style="width:100%;">
+      <div height="100" class="header-box">
+        <el-row>
           <el-col :span="6" class="logo">
-            <img src="../../../static/img/ic_logo.png">
+  
+            <!-- <svgIcon></svgIcon> -->
+            <!-- <embed src="../../../static/icons/hwLoge.svg" style="display:inline-bolck;width:200px;height:50px;" /> -->
+            <!-- <svg xmlns="/static/icons/hwLoge.svg" version="1.1">
+               <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2"  />
+            </svg>-->
+           <img src="../../../static/img/new_logo.png"  />
           </el-col>
           <el-col :span="18">
             <el-row class="nav-box">
-              <el-col :span="4.8" @click="scroll_detail">
-                公司简介
+              <el-col :span="4.8">
+                <div  @click="scroll_detail">
+                    公司简介
+                </div>
                 <!-- <a href="#hw_detail">公司简介</a> -->
               </el-col>
-              <el-col :span="4.8" @click="scroll_reject">解决方案</el-col>
-              <el-col :span="4.8" @click="scroll_kills">产品功能介绍</el-col>
-              <el-col :span="4.8" @click="scroll_footer">社会价值</el-col>
-              <el-col :span="4.8" @click="Contact_Us">联系我们</el-col>
+              <el-col :span="4.8"><div  @click="scroll_reject"> 解决方案</div></el-col>
+              <el-col :span="4.8"><div  @click="scroll_kills">产品功能介绍</div></el-col>
+              <el-col :span="4.8"><div  @click="scroll_footer">社会价值</div></el-col>
+              <el-col :span="4.8"><div  @click="Contact_Us">联系我们</div></el-col>
             </el-row>
           </el-col>
         </el-row>
-      </el-header>
+      </div>
     </el-container>
     <!-- 轮播图 -->
-    <el-carousel style="width:100%;margin-top:100px;" trigger="click" height="662px">
+    <el-carousel style="margin-top:100px;" trigger="click" height="662px">
       <el-carousel-item class="list-img">
-        <img src="../../../static/img/imga.jpg" alt>
+        <img src="../../../static/img/imga.jpg" alt />
       </el-carousel-item>
 
       <el-carousel-item class="list-img">
-        <img src="../../../static/img/imgc.jpg" alt>
+        <img src="../../../static/img/imgc.jpg" alt />
       </el-carousel-item>
     </el-carousel>
     <div class="clearfix" id="hw-detail">
       <div class="box">
         <el-row :gutter="20">
           <el-col :span="12">
-            <img src="../../../static/img/hw_detail.png" style="width:100%; height:100%;float: right">
+            <img
+              src="../../../static/img/hw_detail.png"
+              style="width:100%; height:100%;float: right"
+            />
           </el-col>
           <el-col :span="12">
-
-            <p>
-              深圳市豪位科技有限公司公司本着为人民停车服务的宗旨，响应国家发改委的号召，积极参与建设和运营停车资源，推动停车智能化信息化。
-              公司总部座落于深圳市南山区，是一家深耕于共享停车垂直领域的互联网企业。创始团队拥有原世界500强企业高管、全球名校毕业海归硕士博士、停车行业市场精英、以及原华为、电信、富士康等知名企业的资深通信领域技术专家。室内导航技术在国内国际领先，已获10多项专利、6项软著。<br/>
-         
-            公司技术团队经过数年的自主研发，利用人车位智能协同系统，运用大数据驱动的深度学习技术，完美实现了停车管理信息系统的互联互通。这套人·车·位智联互通平台，主要包含停车位预约、充电桩预约两大功能，平台还在拓展，相信会给用户不断带来更贴心更周到的停车服务体验。<br/>
-           除深圳总部外，公司在上海、广州、重庆、成都均布局了市场运营团队。公司将陆续签约超过1万家停车场资源，车位500万个以上。<br/>
-           
-            公司注册商标“人·车·位”，意誉着为人们提供更便利的停车位预约服务，致力于以共享经济实践响应中国“互联网+”的创新战略，解决中国的交通停车和环保挑战，提升用户停车体验，创造社会价值，建设高效、可持续的移动出行新生态</p>
+            <el-collapse v-model="activeName" accordion>
+              <el-collapse-item title="深圳市豪位科技有限公司" name="1">
+                <p>深圳市豪位科技有限公司总部座落于深圳市南山区，是一家深耕于车位精细化管理的高科技物联网公司。本着“停车找位服务专家”的宗旨，响应国家发改委的号召，积极参与建设和运营停车资源，推动停车智能化信息化。致力于以共享经济实践响应中国“互联网+”的创新战略，解决中国的停车交通和环保挑战，建设高效、可持续的移动出行新生态。</p>
+                <!-- <div>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</div>
+                <div>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</div>-->
+                <p>公司注册商标“小二占位”，意寓着我们是专注为车主提供停车找位占位服务的服务商。公司技术团队经过数年的自主研发，运用大数据驱动的深度学习技术，开发了人车位智联互通系统，完美实现了与停车场信息管理系统的互联互通，并以车位锁作为切入点，打造以车位为核心切入点的停车产品链，主要包含预约停车、找空位两大业务功能，运用了前沿的室内导航技术用以支撑室内导航和反向寻车，提升车主停车体验。</p>
+                <!-- <div>控制反馈：通过界面样式和交互动效让用户可以清晰的感知自己的操作；</div>
+                <div>页面反馈：操作后，通过页面元素的变化清晰地展现当前状态。</div>-->
+              </el-collapse-item>
+              <el-collapse-item title="技术团队" name="3">
+                <p>技术团队内还有一批具有二十年无线通信技术研发经验，深耕于解决信号覆盖问题的细分领域的专家。经过迅速发展，NB-IOT物联网和4G/5G移动通信网络覆盖方面的产品已初具规模，并得到了众多合作伙伴的一致认可。根据业界的需要，成功研制了国内第一款具有自主知识产权的可实现自动选频的NB-IOT无线直放站、4G无线直放站以及NB-IOT和4G的双模无线直放站，以解决智慧三表及地磁等物联网产品在地下室或弱电井等场景下无信号覆盖的问题以及4G物联网设备的信号问题。随着5G的普及，未来我们还将推出5G系列设备和支持5G高频段的新型无源覆盖系统。与此同时，我们还提供物联网和4G/5G信号覆盖工程的交钥匙工程，包括勘测、方案设计、材料准备、施工、开通调试和维护等一条龙服务。</p>
+                <!-- <div>简化流程：设计简洁直观的操作流程；</div>
+              <div>清晰明确：语言表达清晰且表意明确，让用户快速理解进而作出决策；</div>
+                <div>帮助用户识别：界面简单直白，让用户快速识别而非回忆，减少用户记忆负担。</div>-->
+              </el-collapse-item>
+            </el-collapse>
+            <!-- <p>
+              深圳市豪位科技有限公司总部座落于深圳市南山区，是一家深耕于车位精细化管理的高科技物联网公司。本着“停车找位服务专家”的宗旨，响应国家发改委的号召，积极参与建设和运营停车资源，推动停车智能化信息化。致力于以共享经济实践响应中国“互联网+”的创新战略，解决中国的停车交通和环保挑战，建设高效、可持续的移动出行新生态。
+             </p>
+             <p> 公司注册商标“小二占位”，意寓着我们是专注为车主提供停车找位占位服务的服务商。公司技术团队经过数年的自主研发，运用大数据驱动的深度学习技术，开发了人车位智联互通系统，完美实现了与停车场信息管理系统的互联互通，并以车位锁作为切入点，打造以车位为核心切入点的停车产品链，主要包含预约停车、找空位两大业务功能，运用了前沿的室内导航技术用以支撑室内导航和反向寻车，提升车主停车体验。
+             </p>
+             <p>
+                技术团队内还有一批具有二十年无线通信技术研发经验，深耕于解决信号覆盖问题的细分领域的专家。经过迅速发展，NB-IOT物联网和4G/5G移动通信网络覆盖方面的产品已初具规模，并得到了众多合作伙伴的一致认可。根据业界的需要，成功研制了国内第一款具有自主知识产权的可实现自动选频的NB-IOT无线直放站、4G无线直放站以及NB-IOT和4G的双模无线直放站，以解决智慧三表及地磁等物联网产品在地下室或弱电井等场景下无信号覆盖的问题以及4G物联网设备的信号问题。随着5G的普及，未来我们还将推出5G系列设备和支持5G高频段的新型无源覆盖系统。与此同时，我们还提供物联网和4G/5G信号覆盖工程的交钥匙工程，包括勘测、方案设计、材料准备、施工、开通调试和维护等一条龙服务。
+            </p>-->
           </el-col>
         </el-row>
       </div>
@@ -57,37 +83,33 @@
         <el-row :gutter="20" style="height:400pt;">
           <el-col :span="12">
             <p style="font-size: 20px;font-weight:700;color:#0E83F1;margin-top:60px;">我们是做什么的？</p>
-            <br>
+            <br />
             <h4 style="color:#666;font-weight:700; font-size: 40px ;">解决方案</h4>
-            <br>
-    
+            <br />
+
             <div style="width:100%;color:#717171;padding-top:10px; ">
-              <p id="overflow-p1" style="width:80%;color:#717171; ">
-                人车位生活APP提供停车位预约、充电桩预约服务。手机可以直接快捷语音预约车位。室外导航至停车场后，
-                自动切换至蓝牙链接模式，精准导航至具体车位的位置。基于GIS地理信息技术的室内导航系统，
-                采用国际领先的路网规划算法，可以精准实现室内导航找位及反向寻车，真正解决用户寻车找位的痛点需求。
-                该技术在国内国际领先，已获10多项专利、6项软著，用户体验非常好。
-          
-              <br/>
-            
-                豪位科技通过自主研发搭建的人·车·位云服务平台系统，完美的实现了自动计费、预约、支付、室内导航、自动解锁等功能全自动化，
-                极大的提高了停车位和充电桩资源的利用率，真正实现人·车·位·生活互联互通
-              </p>
+              <p
+                id="overflow-p1"
+                style="width:80%;color:#717171; text-indent:40px;font-size: 20px; "
+              >公司自主研发的“小二占位”APP，主要为广大车主提供预约车位、找空位的服务，方便车主提前规划出行时间和出行路线，实现高峰引流，平峰导流，合理化分配车位，解决广大车主停车难的问题。无感支付可实现场库无人值守，减少人力成本和管理成本。</p>
+              <!-- <br/>  -->
+              <p
+                style="width:80%;color:#717171; text-indent:40px;font-size: 20px; "
+              >基于GIS地理信息技术的室内导航系统，采用前沿的路网规划算法，根据大数据分析以及人工智能测算，可以实现停车场内精准导航找位及反向寻车等功能，真正解决车主寻车、找位的痛点。</p>
             </div>
           </el-col>
           <el-col :span="12">
             <div class="wrap">
               <div class="center txt-center">
                 <img
-                  src="../../../static/img/logo.png"
-                  style="width:50%;height:50%;margin-top: 37px;
-    margin-bottom: -31px"
+                  src="../../../static/img/xiaoer_logo.png"
+                  style="margin-top: 37px;
+                  margin-bottom: -31px"
                 />
-                <br>
-                <span>人 · 车 · 位 · 生 活</span>
+                <!-- <span>小 · 二 · 占 · 位</span> -->
               </div>
               <!-- 左下角为item1 -->
-              <div class="item item1">预约充电</div>
+              <div class="item item1">找空位</div>
               <div class="item item2">预约车位</div>
               <div class="item item3">个性化车位</div>
               <div class="item item4">场内导航</div>
@@ -127,15 +149,15 @@
               <div class="con-item">
                 <span>预约停车</span>
                 <p>
-                  通过“人车位.生活”APP提前预约车位，
-                  <br>方便时间管控，降低出行成本
+                  通过小二占位APP提前预约车位，方
+                  <br />便时间管控，降低出行成本
                 </p>
               </div>
               <div class="con-item">
                 <span>预约充电</span>
                 <p>
-                  通过“人车位.生活”APP提前预约充电桩
-                  <br>车位，享受即停即充的便利
+                  通过小二占位APP提前预约充电桩车
+                  <br />位，享受即停即充的便利
                 </p>
               </div>
               <div class="con-item">
@@ -145,13 +167,13 @@
             </div>
             <div style="width:75px;overflow:hidden;float:left;">
               <div class="img-item">
-                <img src="../../../static/img/about_parking.png" alt>
+                <img src="../../../static/img/about_parking.png" alt />
               </div>
               <div class="img-item">
-                <img src="../../../static/img/ic_yuyue.png" alt>
+                <img src="../../../static/img/ic_yuyue.png" alt />
               </div>
               <div class="img-item">
-                <img src="../../../static/img/ic_postion_car.png" alt>
+                <img src="../../../static/img/ic_postion_car.png" alt />
               </div>
             </div>
           </el-col>
@@ -159,40 +181,41 @@
             <img
               src="../../../static/img/content_mobile2.png"
               style="margin-top:-30px;width396px;height:596px;"
-            >
+            />
           </el-col>
           <el-col :span="8">
-            <div class="fl"  style="    padding-top: 5px;padding-left:-4px">
+            <div class="fl" style="    padding-top: 5px;padding-left:-4px">
               <div class="img-item">
-                <img src="../../../static/img/ic_navigation.png" alt>
+                <img src="../../../static/img/ic_navigation.png" alt />
               </div>
               <div class="img-item">
-                <img src="../../../static/img/ic_search_car.png" alt>
+                <img src="../../../static/img/ic_search_car.png" alt />
               </div>
               <div class="img-item">
-                <img src="../../../static/img/non_inductive_pay.png" alt>
+                <img src="../../../static/img/non_inductive_pay.png" alt />
               </div>
             </div>
             <div class="fl" style="padding-left:30px;">
               <div class="con-item txt-left">
                 <span>场内导航</span>
                 <p>
-                  可视化的场内地图以及动态路线指引，<br>让车
+                  可视化的场内地图以及动态路线指引，
+                  <br />让车
                   主快速找到车位，提升停车效率
                 </p>
               </div>
               <div class="con-item txt-left">
                 <span>反向寻车</span>
                 <p>
-                  车辆停入后，通过可视化的场内地图及动态
-                  <br>路线指引，助车主快速找到爱车
+                  车辆停入后，通过可视化的场内地图及动
+                  <br />态路线指引，助车主快速找到爱车
                 </p>
               </div>
               <div class="con-item txt-left">
                 <span>无感支付</span>
                 <p>
-                  车辆与账户绑定并开启自动支付，进出停车
-                  <br>无需手动缴费，体验无感支付的便利
+                  车辆与账户绑定并开启自动支付，进出停
+                  <br />车无需手动缴费，体验无感支付的便利
                 </p>
               </div>
             </div>
@@ -208,77 +231,76 @@
       </div>
       <div class="runded-item runded-item01">
         <div class="runded">
-          <img src="../../../static/img/ic_finger.png" alt>
+          <img src="../../../static/img/ic_finger.png" alt />
         </div>
         <div class="title">错峰引流</div>
         <p>
           高峰引流，平峰时导流，
-          <br>解决停车难
+          <br />解决停车难
         </p>
       </div>
       <div class="runded-item runded-item02">
         <div class="runded">
-          <img src="../../../static/img/ic_money.png" alt>
+          <img src="../../../static/img/ic_money.png" alt />
         </div>
         <div class="title">减员增效</div>
         <p>
           无人值守，减少人力成本
-          <br>和管理成本
+          <br />和管理成本
         </p>
       </div>
       <div class="runded-item runded-item03">
         <div class="runded">
-          <img src="../../../static/img/ic.png" alt>
+          <img src="../../../static/img/ic.png" alt />
         </div>
         <div class="title">提高车位和充电桩利用率</div>
         <p>
           通过导流的方式，提高车位和充电桩
-          <br>利用率,增加场库收入
+          <br />利用率,增加场库收入
         </p>
       </div>
       <div class="runded-item runded-item04">
         <div class="runded">
-          <img src="../../../static/img/ic_goback.png" alt>
+          <img src="../../../static/img/ic_goback.png" alt />
         </div>
         <div class="title">客户引流</div>
         <p>
           与场库合作的商家，通过代约车位
-          <br>代付停车费、提供充电服务等方式
-          <br>吸引客户到店消费，增加店铺收入,
+          <br />代付停车费、提供充电服务等方式
+          <br />吸引客户到店消费，增加店铺收入,
         </p>
       </div>
       <div class="runded-item runded-item05">
         <div class="runded">
-          <img src="../../../static/img/ic_jieneng.png" alt>
+          <img src="../../../static/img/ic_jieneng.png" alt />
         </div>
         <div class="title">节能减排</div>
         <p>
           与售电公司合作，申请电价优惠，
-          <br>减少场库成本和用户支出
+          <br />减少场库成本和用户支出
         </p>
       </div>
       <div class="runded-item runded-item06">
         <div class="runded">
-          <img src="../../../static/img/ic_img24.png" alt>
+          <img src="../../../static/img/ic_img24.png" alt />
         </div>
         <div class="title">时间管理</div>
         <p>
           提前预约定好车位，无需找车位，
-          <br>提升出行效率
+          <br />提升出行效率
         </p>
       </div>
     </div>
     <div class="footer" id="footer">
-      <!-- <el-row class="footer-top clearfix">
-        <div class="footer-left"></div>
-        <div class="footer-center"></div>
-        <div class="footer-right"></div>
-      </el-row> -->
       <FooterCssCirc></FooterCssCirc>
       <el-row class="footer-container">
         <el-col class="container-left" :span="5">
           <div class="title">联系我们</div>
-          <img src="../../../static/img/footer_left.png" alt>
+          <img
+            src="../../../static/img/hw_weixin_account.png"
+            style="width:178px;hieght:178px;"
+            alt
+          />
           <p>扫一扫关注公众号</p>
         </el-col>
         <el-col :span="14" class="contaier-center">
@@ -293,7 +315,7 @@
             </el-col>
             <el-col :span="12" class="right">
               <div>
-                <span>joy.jiang@hwcor.com</span>
+                <span>billy.zhang@hwcor.com</span>
               </div>
               <div>
                 <span>www.hwcor.com</span>
@@ -308,45 +330,74 @@
         </el-col>
         <el-col :span="5">
           <div class="title">APP下载</div>
-          <img src="../../../static/img/logo_app.png" style="width:178px;hieght:178px;" alt>
+          <img
+            src="../../../static/img/logo_app.png"
+            style="width:178px;hieght:178px;"
+            alt
+          />
         </el-col>
       </el-row>
-      <el-row class="footer-bottom">© 2019 Shenzhen Haowei Technology Co.,Ltd.All rights reserved<br/><br/>粤ICP备19046392号 </el-row>
+      <el-row class="footer-bottom">
+        © 2019 Shenzhen Haowei Technology Co.,Ltd.All rights reserved
+        <br />
+        <br />粤ICP备19046392号
+      </el-row>
     </div>
   </div>
 </template>
 <script>
-import FooterCssCirc from "../../utils/FooterCssCirc"
+import FooterCssCirc from "../../utils/FooterCssCirc";
 import InfiniteScroll from "../../utils/InfiniteScroll";
+import svgIcon from "@/components/svgImg";
 export default {
-  name: "index",
-
+  data() {
+    return {
+      activeName: "1"
+    };
+  },
   methods: {
     scroll_detail() {
-     window.scrollTo(0,400)
+      window.scrollTo(0, 400);
     },
     scroll_reject() {
-    window.scrollTo(0,1400)
+      window.scrollTo(0, 1400);
     },
     scroll_kills() {
-    window.scrollTo(0,2600)
+      window.scrollTo(0, 2600);
     },
     scroll_footer() {
-     window.scrollTo(0,3650)
+      window.scrollTo(0, 3650);
     },
-    Contact_Us(){
-     window.scrollTo(0,5000)
-    }   
+    Contact_Us() {
+      window.scrollTo(0, 5000);
+    }
   },
   components: {
     InfiniteScroll,
-    FooterCssCirc
-  }
+    FooterCssCirc,
+    svgIcon
+  },
+  created(){}
 };
 </script>
-<style scoped>
+<style >
+.el-collapse-item__wrap {
+  background-color: #f7f9fc;
+}
+.el-collapse-item__header {
+  background-color: #f7f9fc;
+  font-size: 16px;
+  font-weight: 700;
 
+  /* border-bottom:1px solid #0e83f1; */
+  /* border-top:1px solid #0e83f1; */
+}
+.el-collapse-item__header:first-child {
+}
+</style>
+<style scoped>
 /* 页脚 */
+
 .footer-bottom {
   width: 100%;
   text-align: center;
@@ -442,7 +493,7 @@ export default {
   padding: 93px 0;
   width: 100%;
   height: 515px;
-  background:#273341;
+  background: #273341;
   /* background: url(../../../static/img/footer_img.png) no-repeat; */
 }
 .footer-top {
@@ -480,17 +531,24 @@ export default {
 .wrapper {
   width: 1920px;
   position: relative;
-  margin:0px auto;
+  margin: 0px auto;
   font-family: "Microsoft YaHei";
 }
 /* 头部定位 */
-.header {
-  width: 1920px;
+.header-box {
+  width: 1200px;
+  margin: auto;
+  height: 100px;
   background: #fff;
+}
+.header {
+  width: 100%;
+  min-width: 1920px;
   position: fixed;
   z-index: 999;
   left: 0;
   top: 0;
+  background: #fff;
 }
 /* .header{
   width:1200px;
@@ -506,8 +564,10 @@ p {
   color: #333;
   line-height: 30px;
 }
-li ,span,div{
-  font-family:"Microsoft YaHei";
+li,
+span,
+div {
+  font-family: "Microsoft YaHei";
 }
 
 .footer-hth02 .runded-item p {
@@ -658,7 +718,7 @@ li {
 /* 头部样式 */
 .header-right {
   box-sizing: border-box;
-  text-align:right;
+  text-align: right;
   height: 100px;
   line-height: 100px;
 }
@@ -684,10 +744,11 @@ li {
   justify-content: space-between;
 }
 .nav-box div:hover {
-  background: #ccc;
+  background: #c3dcf5;
+  color: #fff;
+
 }
 .nav-box div {
-
   height: 100px;
   line-height: 100px;
   font-size: 20px;
@@ -780,39 +841,38 @@ li {
   background: linear-gradient(45deg, #ee727d, #fda23f);
   box-shadow: 1px 10px 10px 0px #f17d6f52;
 }
-  #hw-detail{
-    height: 682px; 
-    box-sizing: border-box;
-    padding: 6% 0px;
-    background:#f7f9fc;
+#hw-detail {
+  height: 682px;
+  box-sizing: border-box;
+  padding: 6% 0px;
+  background: #f7f9fc;
+}
+@media screen and (max-width: 1200px) {
+  .wrapper,
+  .header {
+    width: 1200px;
   }
- @media screen and (max-width: 1200px){
-	 .wrapper,.header{
-		 width:1200px;
-	 }
-	 .box{
-		 width:1000px;
-		 margin:0;
-	 }
-    .nav-box div{
-  
-			padding: 0 15px
-		}	
+  .box {
+    width: 1000px;
+    margin: 0;
+  }
+  .nav-box div {
+    padding: 0 15px;
+  }
 
-  .ic-phone{
+  .ic-phone {
     padding: 0;
   }
-  #overflow-p1{
+  #overflow-p1 {
     width: 443px;
-     overflow: hidden;
-    height:320px;
+    overflow: hidden;
+    height: 320px;
   }
-   #hw-detail p{
-     width:615px;
-     height:380px;
-     text-overflow: ellipsis;
-   }
-	}
+  #hw-detail p {
+    width: 615px;
+    text-overflow: ellipsis;
+  }
+}
 /* 媒体查询 */
 
 /* @media screen and (max-width: 1200px){
@@ -836,99 +896,47 @@ li {
    }
 
 } */
-  #hw-detail .triangle{
-    position: absolute;
-    left:47.5%;
-    bottom:0px;
-    border:35px solid #fff;
-    border-top:none;
-    border-left-color:#f7f9fc;
-    border-right-color:#f7f9fc;
-  }
-  #hw-detail{
-    position:relative;
-  }
- @media all
-and (-moz-min-device-pixel-ratio: 0.5) and (-moz-max-device-pixel-ratio: 0.5),
+#hw-detail .triangle {
+  position: absolute;
+  left: 47.5%;
+  bottom: 0px;
+  border: 35px solid #fff;
+  border-top: none;
+  border-left-color: #f7f9fc;
+  border-right-color: #f7f9fc;
+}
+#hw-detail {
+  position: relative;
+}
+@media all and (-moz-min-device-pixel-ratio: 0.5) and (-moz-max-device-pixel-ratio: 0.5),
   (-webkit-min-device-pixel-ratio: 0.5) and (-webkit-max-device-pixel-ratio: 0.5),
   (min-resolution: 0.5dppx) and (max-resolution: 0.5dppx) {
   :root {
-      font-size: 14px;
+    font-size: 14px;
   }
 
-  #overflow-p1{
+  #overflow-p1 {
     width: 443px;
     overflow: hidden;
-    height:400px;
-  } 
-  .nav-box div{
-    font-size:14px;
-    padding: 0 15px
+    height: 400px;
   }
-  .ic-phone{
+  .nav-box div {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+  .ic-phone {
     padding: 0;
   }
-  .box{
-    width:1440px;
+  .box {
+    width: 1440px;
   }
- 
-   #hw_detail p{
-     line-height: 30px;
-   
-   }
 
-
-} 
-/* @media all
-and (-moz-min-device-pixel-ratio: 1.09) and (-moz-max-device-pixel-ratio: 1.18),
-  (-webkit-min-device-pixel-ratio: 1.09) and (-webkit-max-device-pixel-ratio: 1.18),
-  (min-resolution: 1.09dppx) and (max-resolution: 1.18dppx) {
-  :root {
-      font-size: 14px;
+  #hw_detail p {
+    line-height: 30px;
   }
 }
-@media all
-and (-moz-min-device-pixel-ratio: 1.19) and (-moz-max-device-pixel-ratio: 1.28),
-  (-webkit-min-device-pixel-ratio: 1.19) and (-webkit-max-device-pixel-ratio: 1.28),
-  (min-resolution: 1.19dppx) and (max-resolution: 1.28dppx) {
-  :root {
-      font-size: 13px;
-  }
-}
-@media all
-and (-moz-min-device-pixel-ratio: 1.29) and (-moz-max-device-pixel-ratio: 1.4),
-  (-webkit-min-device-pixel-ratio: 1.29) and (-webkit-max-device-pixel-ratio: 1.4),
-  (min-resolution: 1.29dppx) and (max-resolution: 1.4dppx) {
-  :root {
-      font-size: 12px;
-  }
-}
-@media all
-and (-moz-min-device-pixel-ratio: 1.41) and (-moz-max-device-pixel-ratio: 1.6),
-  (-webkit-min-device-pixel-ratio: 1.41) and (-webkit-max-device-pixel-ratio: 1.6),
-  (min-resolution: 1.41dppx) and (max-resolution: 1.6dppx) {
-  :root {
-    background:pink;
-      font-size: 10px;
-  }
-}
-@media all
-and (-moz-min-device-pixel-ratio: 1.61) and (-moz-max-device-pixel-ratio: 1.8),
-  (-webkit-min-device-pixel-ratio: 1.61) and (-webkit-max-device-pixel-ratio: 1.8),
-  (min-resolution: 1.61dppx) and (max-resolution: 1.8dppx) {
-  :root {
-      font-size: 9px;
-
-      background:blue;
-  }
-}
-@media all
-and (-moz-min-device-pixel-ratio: 1.81) and (-moz-max-device-pixel-ratio: 2.1),
-  (-webkit-min-device-pixel-ratio: 1.81) and (-webkit-max-device-pixel-ratio: 2.1),
-  (min-resolution: 1.81dppx) and (max-resolution: 2.1dppx) {
-  :root {
-      font-size: 8px;
-  }
-} */
 </style>
 
+  <style type="text/css">
+
+</style>
