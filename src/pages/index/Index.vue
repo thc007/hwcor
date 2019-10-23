@@ -381,12 +381,12 @@ export default {
 };
 </script>
 <style >
-.el-collapse-item__wrap {
+.box .el-collapse-item__wrap {
   background-color: #f7f9fc;
 }
-.el-collapse-item__header {
+.box .el-collapse-item__header {
   background-color: #f7f9fc;
-  font-size: 16px;
+  font-size: 18px!important;
   font-weight: 700;
 
   /* border-bottom:1px solid #0e83f1; */
