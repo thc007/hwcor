@@ -89,7 +89,6 @@ and (-moz-min-device-pixel-ratio: 1.41) and (-moz-max-device-pixel-ratio: 1.6),
   (-webkit-min-device-pixel-ratio: 1.41) and (-webkit-max-device-pixel-ratio: 1.6),
   (min-resolution: 1.41dppx) and (max-resolution: 1.6dppx) {
   :root {
-    background:pink;
       font-size: 10px;
   }
 }
@@ -99,8 +98,6 @@ and (-moz-min-device-pixel-ratio: 1.61) and (-moz-max-device-pixel-ratio: 1.8),
   (min-resolution: 1.61dppx) and (max-resolution: 1.8dppx) {
   :root {
       font-size: 9px;
-
-      background:blue;
   }
 }
 @media all

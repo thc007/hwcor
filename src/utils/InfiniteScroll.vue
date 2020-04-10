@@ -20,10 +20,8 @@ export default {
     let wrap = document.getElementsByClassName("wrap-c")[0];
     let content = document.getElementsByClassName("content")[0];
     let clone = document.getElementsByClassName("clone")[0];
-    
     clone.innerHTML = content.innerHTML;
     function Marquee() {
-      
       if (clone.offsetWidth - wrap.scrollLeft <= 0){
              wrap.scrollLeft -= content.offsetWidth;
         

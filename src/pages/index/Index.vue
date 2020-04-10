@@ -178,10 +178,7 @@
             </div>
           </el-col>
           <el-col :span="8">
-            <img
-              src="../../../static/img/content_mobile2.png"
-              style="margin-top:-30px;width396px;height:596px;"
-            />
+            <img src="../../../static/img/content_mobile2.png" style="margin-top:-30px;width396px;height:596px;"/>
           </el-col>
           <el-col :span="8">
             <div class="fl" style="    padding-top: 5px;padding-left:-4px">
@@ -388,11 +385,6 @@ export default {
   background-color: #f7f9fc;
   font-size: 18px!important;
   font-weight: 700;
-
-  /* border-bottom:1px solid #0e83f1; */
-  /* border-top:1px solid #0e83f1; */
-}
-.el-collapse-item__header:first-child {
 }
 </style>
 <style scoped>
@@ -550,12 +542,6 @@ export default {
   top: 0;
   background: #fff;
 }
-/* .header{
-  width:1200px;
-  margin:0 auto;
-	padding:0;
- 
- } */
 .fl {
   float: left;
 }
@@ -873,29 +859,6 @@ li {
     text-overflow: ellipsis;
   }
 }
-/* 媒体查询 */
-
-/* @media screen and (max-width: 1200px){
-    .nav-box li{
-  
-    padding: 0 15px
-  }
-
-  .ic-phone{
-    padding: 0;
-  }
-  #overflow-p1{
-    width: 443px;
-     overflow: hidden;
-    height:320px;
-  }
-   #hw-detail p{
-     width:615px;
-     height:380px;
-     text-overflow: ellipsis;
-   }
-
-} */
 #hw-detail .triangle {
   position: absolute;
   left: 47.5%;
@@ -935,8 +898,4 @@ li {
     line-height: 30px;
   }
 }
-</style>
-
-  <style type="text/css">
-
 </style>
