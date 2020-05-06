@@ -12,5 +12,17 @@ export default {
 </script>
 
 <style>
-
+#app {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#app::-webkit-scrollbar {
+  display: none;
+}
+p{
+  line-height: 36px;
+}
 </style>

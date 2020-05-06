@@ -43,6 +43,10 @@ module.exports = {
       },
 
       {
+        test: /\.less$/,
+        loader: "style-loader!css-loader!less-loader",
+      },      
+      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         // exclude: [resolve('static/icons')], // 去除你存放svg的那个文件夹，改用svgo-loader处理

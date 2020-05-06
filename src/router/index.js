@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/pages/index/Index'
+// import Home from '@/pages/index/home'
 
 Vue.use(Router)
 
@@ -8,12 +8,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: resolve=>require(["@/pages/index/Index"],resolve)
+      component: resolve=>require(["@/pages/home/home"],resolve)
     },
-    {
-      path: 'index',
-      name: 'Index',
-      component: resolve=>require(["@/pages/index/Index"],resolve)
+    {path: '*',
+    component: resolve=>require(["@/pages/home/home"],resolve)
     }
   ]
 })
