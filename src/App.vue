@@ -12,6 +12,7 @@ export default {
 </script>
 
 <style>
+@import url('./assets/style/reset');
 #app {
   width: 100vw;
   height: 100vh;
