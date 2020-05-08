@@ -3,7 +3,9 @@
       <div height="100" class="header-box">
         <el-row class="box">
           <el-col :span="5" class="logo">
-           <img src="/static/img/new_logo.png"  />
+              <a href="http://www.hwcor.com">
+                <img src="/static/img2.0/www.hwcor.com.png"  />
+              </a>
           </el-col>
           <el-col :span="19" class="nav-wrap">
             <el-row class="nav-box">
@@ -47,10 +49,13 @@ export default{
 .header {
   position: fixed;
   z-index: 999;
-  left: 0;
+  left: 50%;
   top: 0;
   color:  #fff;
   width: 100%;
+  max-width: 1920px;
+  transform: translateX(-50%);
+//   margin: 0 auto;
   .nav-box {
     width: 684px;
     height: 100px;

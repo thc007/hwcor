@@ -1,9 +1,13 @@
 <template>
-<div>
+<div class="footer_">
        <div class="wrapper-4">
             <div class="box-4">
                 <div class="left">
-                    <div></div>
+                    <div>          <img
+            src="/static/img/hw_weixin_account.png"
+            style="width:100%;"
+            alt
+          /></div>
                     <p>扫一扫关注公众号</p>
                 </div>
                 <div class="center">
@@ -13,7 +17,11 @@
                     <p>地址：深圳市南山区深圳湾科技生态园二区9栋A2409～A2414</p>
                 </div>
                 <div class="right">
-                    <div></div>
+                    <div>         <img
+            src="/static/img2.0/xiaoerzhanweiapk.png"
+            style="width:100%;"
+            alt
+          /></div>
                     <p>APP下载</p>
                 </div>
             </div>
@@ -24,6 +32,11 @@
 </div>
 </template>
 <style lang="less" scoped>
+.footer_{
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+}
 .wrapper-4{
     background:rgba(40,46,58,1);
     height: 238px;
