@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/home/home'
 import Main from '@/pages/mine/mine'
+import Subtoll from '@/pages/subtool/subtool'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
     {
       path:"/mine",
       component:Main
+      // component: resolve=>require(["@/pages/mine/mine"],resolve)
+    },
+    {
+      path:"/subtoll",
+      component:Subtoll
       // component: resolve=>require(["@/pages/mine/mine"],resolve)
     },
     {path: '*',

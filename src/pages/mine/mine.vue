@@ -1,132 +1,75 @@
 <template>
     <div class="fixedLayout">
-        <Header bgImg="url(/static/img2.0/图@2x.png)"></Header>
+        <Header bgImg="#0F6FDE"></Header>
         <div class="wrapper-1">
-            <img src="/static/img2.0/图@2x.png" alt="" class="content-bg-img">
-            <div class="wrap">
-                <div class="box-1 box">
-                    <div class="item" v-for="( item ,i) in navList" :key="i">
-                        <div><img :src="item.url" alt=""></div>
-                        <p>{{item.label}}</p>
-                    </div>
-                </div>
-            </div>
+            <img src="/static/img2.0/mine-01.png" alt="" class="content-bg-img">
         </div>
         <div class="wrapper-2">
-            <img  class="content-bg-img" src="/static/img2.0/wrapper-2.png" alt="">
             <div class="wrap">
                 <div class="box-2 box">
-                    <div class="top">
-                        <h3 class="big-title">产品功能</h3>
-                        <p>公司自主研发的“小二占位”APP，主要为广大车主提供预约车位、找空位的服务，方便
-                            车主提前规划出行时间和出行路线，实现高峰引流，平峰导流，合理化分配车位，解决广
-                            大车主停车难的问题。无感支付可实现场库无人值守，减少人力成本和管理成本。基于GIS
-                            地理信息技术的室内导航系统，采用前沿的路网规划算法，根据大数据分析以及人工智能
-                            测算，可以实现停车场内精准导航找位及反向寻车等功能，真正解决车主寻车、找位的痛点。
+                    <h3>公司简介</h3>
+                    <div>
+                        <p>
+                                深圳市豪位科技有限公司，是一家深耕于车位精细化管理的高科技物联网公司。本着“停车找位服务专家”的宗旨，响应国家发改委的号召，积极参与建设和运营停车资源，推动停车智能化信息化。致力于以共享经济实践响应中国“互联网+”的创新战略，解决中国的停车交通和环保挑战，建设高效、可持续的移动出行新生态。</p>
+       <p>公司注册商标“小二占位”，意寓着我们是专注为车主提供停车找位占位服务的服务商。公司技术团队经过数年的自主研发，运用大数据驱动的深度学习技术，开发了人车位智联互通系统，完美实现了与停车场信息管理系统的互联互通，并以车位锁作为切入点，打造以车位为核心切入点的停车产品链，主要包含预约停车、找空位两大业务功能，运用了前沿的室内导航技术用以支撑室内导航和反向寻车，提升车主停车体验。</p>
+       <p>技术团队内还有一批具有二十年无线通信技术研发经验，深耕于解决信号覆盖问题的细分领域的专家。经过迅速发展，NB-IOT物联网和4G/5G移动通信网络覆盖方面的产品已初具规模，并得到了众多合作伙伴的一致认可。根据业界的需要，成功研制了国内第一款具有自主知识产权的可实现自动选频的NB-IOT无线直放站、4G无线直放站以及NB-IOT和4G的双模无线直放站，以解决智慧三表及地磁等物联网产品在地下室或弱电井等场景下无信号覆盖的问题以及4G物联网设备的信号问题。随着5G的普及，我们还推出了5G系列设备和支持5G高频段的新型无源覆盖系统。与此同时，我们还提供物联网和4G/5G信号覆盖工程的交钥匙工程，包括勘测、方案设计、材料准备、施工、开通调试和维护等一条龙服务。
+                            </p>
+                    </div>
+                    <div class="bottom">
+                        <p>
+                            <span>hao</span><i></i><span>wei</span>
                         </p>
-                    </div>
-                    <div class="center">
-                        <div class="item">
-                            <img src="/static/img2.0/peak.png" alt="">
-                            <p>错峰包月</p>
+                    <div class="position_box">
+                        <div>
+                            <h4>企业文化</h4>
+                            <p>热情&nbsp&nbsp&nbsp&nbsp创新&nbsp&nbsp&nbsp&nbsp专业&nbsp&nbsp&nbsp&nbsp执着</p>
                         </div>
-                        <div class="item">
-                            <img src="/static/img2.0/group.png" alt="">
-                            <p>集团车位</p>
-                        </div>
-                                            <div class="item">
-                            <img src="/static/img2.0/voice_reserve.png" alt="">
-                            <p>语音预约</p>
+                        <div>
+                            <h4>企业愿景</h4>
+                            <p>开启车位物联标签化新时代</p>
                         </div>
                     </div>
-                    <div class="bottom">
-                        <h3 class="big-title">错峰包月</h3>
-                        <p>通过APP即可办理在我们平台发布了错峰包月信息的停车场业务</p>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="wrapper-3 wrapper">
-            <img src="/static/img2.0/wrapper-3.png" alt="" class="content-bg-img">
-            <div class="wrap">
-                <div class="box-3 box">
-                    <div class="left">
-                        <h3  class="big-title">预约停车</h3>
-                        <p>提前预约车位，方便时间管控，降低出行成本</p>
-                    </div>
-                    <div class="center">
-                        <h3 class="big-title">找空位</h3>
-                        <p>提前知道停车场空位情况，并可导航车位</p>
-                    </div>
-                    <div class="right">
-                        <h3 class="big-title">集团车位</h3>
-                        <p>车位集团化管理，满足集团内部员工及外部访客停车的需求</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="wrapper" style="height:1269px">
-            <img src="/static/img2.0/wrapper-4.png" alt="" class="content-bg-img">
 
+                </div>
+            </div>
         </div>
-        <div class="wrapper" style="height:1269px;margin-top:-2px;">
-            <img src="/static/img2.0/wrapper-5.png" alt="" class="content-bg-img">
-            <div class="wrap-g">
-                <div class="box-5 box">
-                    <div class="left">
-                        <h3>场内导航</h3>
-                        <p>可视化的场内地图以及动态路线指引让车主快速找到车位，提升停车效率</p>
-                    </div>
-                    <div class="right">
-                        <h3>语音预约</h3>
-                        <p>说出您的目的地即可帮您预订车位，让您在行车途中时刻握紧方向盘</p>
+        <div class="wrapper-3 ">
+            <div class="box-3 box">
+                <h3>核心专利</h3>
+                <div class="content_box">
+                    <div class="item" v-for="item in 3" :key="item">
+                        <img src="/static/img2.0/patent.png" alt="核心专利">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="wrapper" style="height:1269px">
-            <img src="/static/img2.0/wrapper-6.png" alt="" class="content-bg-img">
-            <div class="wrap-g">
-                <div class=" box-6 box">
-                    <div class="left">
-                        <h3 class="big-title">反向寻车</h3>
-                        <p>车辆停入后，通过可视化的场内地图及动态路线指引，助车主快速找到爱车</p>
-                    </div>
-                    <div class="right">
-                        <h3 class="big-title">无感支付</h3>
-                        <p>车辆与账户绑定并开启自动支付，进出停车无需手动缴费，体验无感支付的便利</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="wrapper" style="height:1024px">
-            <img src="/static/img2.0/wrapper-7.png" alt="" class="content-bg-img">
-        </div>
-        <div class="wrapper" style="height:832px">
-            <img src="/static/img2.0/wrapper-8.png" alt="" class="content-bg-img">
-            <div class="wrap-g">
-                <div class="box-8 box">
-                    <div class="top">
-                        <h3 class="big-title">车位锁计费</h3>
-                        <p>通过APP即可扫码缴纳停车费</p>
-                    </div>
-                    <div class="bottom">
-                        <div class="item">
-                            <img src="/static/img2.0/footer_img_01.png" alt="">
-                            <p>无人值守的停车模式</p>
-                        </div>
-                        <div class="item">
-                            <img src="/static/img2.0/footer_img_03.png" alt="">
-                            <p>高强度设备锁车</p>
-                        </div>
-                        <div class="item">
-                            <img src="/static/img2.0/footer_img_02.png" alt="">
-                            <p>车主泊车后可自行离开</p>
+        <div  style="height:999px">
+            <div class="box-4 box">
+                <h3>成长历程</h3>
+                <div class="content_box">
+                    <div class="top"></div>
+                    <div class="center">
+                        <div class="item_wrap">
+
+                            <!-- <div class="item" v-for="item in 5" :key="item" :style="{top:84*item+'px',left:item%2==1?-55+'px':10+'px',flexDirection:item%2==1?'row-reserse':'row'}">
+                                <div class="dot">22</div>
+                                <div class="circle">{{item>10?('0'+(item+1)):item}}</div>
+                            </div> -->
+                            <div class="item" v-for="(o,item) in list" :key="item" :style="{transform:item%2==1?'':'translateX(-100%)',flexDirection:item%2==1?'row':'row-reverse'}">
+                                <div class="dot"></div>
+                                <div class="circle">{{item<10?('0'+(item+1)):item}}</div>
+                                <div class="text">
+                                    <p class="time">{{o.time}}</p>
+                                    <p class="txt">{{o.txt}}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+      
         <Footer></Footer>
     </div>
 </template>
@@ -136,12 +79,15 @@ import Footer from "@/components/Footer"
 export default {
     data(){
         return {
-            navList:[
-                {url:"/static/img2.0/reserve.png",label:"预约车位"},
-                {url:"/static/img2.0/parking_nav.png",label:"场内导航"},
-                {url:"/static/img2.0/reverse_nav.png",label:"反向寻车"},
-                {url:"/static/img2.0/look_place.png",label:"找空位"},
-                {url:"/static/img2.0/null_pay.png",label:"无感支付"},
+            list:[
+                {time:"2018/12",txt:"项目规划"},
+                {time:"2019/01",txt:"公司成立"},
+                {time:"2019/03",txt:"部分种子轮资金到位"},
+                {time:"2019/04",txt:"测试版上线"},
+                {time:"2019/07",txt:"正式版发布，数百种轮资金到位"},
+                {time:"2019/08",txt:"深圳湾科技生态园项目落地"},
+                {time:"2019/12",txt:"万象城、海岸城天河城、徐家汇启动天使轮融资"},
+                
             ]
         }
     },
@@ -154,39 +100,6 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.big-title{
-    font-size: 2.6rem;
-    color: #252A50;
-    margin-bottom: 50px;
-     &::before{
-        content: "";
-        display: inline-block;
-        width:19px;
-        height:7px;
-        background: #000;
-        border-radius: 6px;
-        box-shadow:-5px 12px 0px 0px rgba(203,205,217,1);
-        transform: rotateZ(-30deg);
-        margin: -10px 25px 0 0;
-        vertical-align:middle;
-    }
-    &::after{
-        content: "";
-        display: inline-block;
-        width:19px;
-        height:7px;
-        background: #000;
-        border-radius: 6px;
-        box-shadow:-5px 12px 0px 0px rgba(203,205,217,1);
-        transform: rotateZ(-30deg);
-        margin: -10px 25px 0;
-        vertical-align:middle;
-    }
-}
-.big-title+p{
-    margin-left:40px;
-    line-height: 50px;
-}
 .fixedLayout {
   padding-top: 100px;
   min-width: 1024px;
@@ -213,28 +126,11 @@ export default {
 }
 .wrapper-1{
     position: relative;
-    height: 607px;
-    top: -100px;
-    .wrap{
-        position: relative;
-        left: 0;
-        top: 0;
-    }
-    .box-1{
-        display: flex;
-        color: #fff;
-        justify-content: space-around;
-        padding-top: 232px;
-
-        .item{
-            text-align: center;
-
-        }
-    }
+    height: 602px;
 }
 .wrapper-2{
     position: relative;
-    height: 1269px;
+    height: 1180px;
     margin-top: -1px;
     .wrap{
         position: relative;
@@ -243,146 +139,183 @@ export default {
     }
     .box-2{
         padding: 100px 30px;
-        .top{
             h3{
-                font-size: 2.6rem;
-                color: #252A50;
+                font-size: 1.8rem;
+                color: #333333;
+                font-weight: 700;
+                margin-bottom: 50px;
             }
-            p{
-                line-height: 54px;
+            &>p{
+                line-height: 42px;
                 width: 1187px;
-                font-size: 1.49rem;
-                color:rgba(37,42,80,.7);font-weight:400;
-            }
-        }
-        .center{
-            margin-left: 30px;
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-around;
-            .item{
-                width:194px;
-                height:194px;
-                overflow: hidden;
-                border: 20px solid #ecd5fe;
-                background: linear-gradient(90deg, #d587ff, #9f58ff);
-                background-clip: 50%;
-                border-radius:50%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                p{
-                    text-align: center;
-                    color: #fff;
-                }
-                &:nth-child(2){
-                    border-color: #bcdefa;
-                    background: linear-gradient(90deg,#2CACF1, #6160FE);
-                }
-                 &:nth-child(3){
-                    border-color: #bae1f9;
-                    background: linear-gradient(90deg, #64DCDB, #239FFD);
+                color:#333333;
+                text-indent: 2rem;
+                &:first-child{
+                    text-indent: 0rem;
                 }
             }
-        }
-        .bottom{
-            margin-top: 167px;
-            p{
-                width:476px;
-                height:83px;
-                font-size:30px;
-                font-family:Microsoft YaHei;
-                font-weight:400;
-                color:rgba(37,42,80,1);
-                opacity:0.77;
+            .bottom{
+                position: relative;
+                width:1199px;
+                height:317px;
+                background:rgba(251,251,251,1);
+                margin-top: 87px;
+                padding-top:90px ;
+                box-sizing: border-box;
+                padding-left: 230px;
+                &>p{
+                     font-size: 10rem;
+                     line-height: 10rem;
+                     font-weight:400;
+                    color:rgba(234,241,255,1);
+                    opacity:0.4;
+                }
+                i{
+                    width:1px;
+                    height:191px;
+                    background:rgba(216,217,220,1);
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .position_box{
+                    width: 100%;
+                    height: 100%;;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    &>div{
+                        text-align: center;
+                        h4{
+                            color: #333333;
+                            font-size: 1.6rem;
+                            line-height: 52px;
+                        }
+                        p{
+                            font-size: 0.9rem;
+                            color:#4C4C4C;
+                            font-weight: 400;
+                        }
+                    }
+                }
             }
-        }
+        
+       
     }
 }
 .wrapper-3{
-    margin-top: -2px;
-    .wrap{
-        position: relative;
-        left: 0;
-        top: 0;
-    }
+    height: 860px;
+    background:rgba(251,251,251,1);
     .box-3{
-        padding-top: 700px;
-        display: flex;
-        .left{
-            p{
-                width:329px;
-            height:83px;
-            font-size:30px;
-            font-weight:400;
-            color:rgba(37,42,80,1);
-            opacity:0.77;
-          }
+        padding-top: 65px;
+        h3{
+            font-size: 1.8rem;
+            color: #333333;
         }
-        .center{
-            margin-top: 230px;
-            margin-right: 150px;
-            margin-left: 50px;
-            p{
-                width:347px;
-                height:83px;
-                font-size:30px;
-                font-family:Microsoft YaHei;
-                font-weight:400;
-                color:rgba(37,42,80,1);
-                opacity:0.77;
-            }
-        }
-        .right{
-            margin-top: 230px;
-            p{
-                width:419px;
-                height:83px;
-                font-size:30px;
-                font-family:Microsoft YaHei;
-                font-weight:400;
-                color:rgba(37,42,80,1);
-                opacity:0.77;
-            }
+        .content_box{
+          display: flex;
+          padding-top: 65px;
         }
     }
 }
-.box-5{
-    display: flex;
-    .left{
-        width:480px;
-        height:163px;
-        font-size:48px;
-        color:rgba(255,255,255,1);
-        margin-top: 300px;
-        h3{
-            margin-bottom: 30px;
+.box-4{
+    padding-top: 60px;
+    h3{
+        font-size: 1.8rem;
+        color: #333333;
+    }
+    .content_box{
+        margin-top: 40px;
+        width: 100%;
+        .top{
+            border:7px solid #B7D8FA;
+            width:24px;
+            height:23px;
+            background:rgba(16,125,238,1);
+            border-radius:50%;
+            margin: 0 auto;
+        }
+        .center{
+            width: 6px;
+            height: 880px;
+            margin: -2px auto 0;
+            background: #B7D8FA;
+            position: relative;
+            .item_wrap{
+                position: absolute;
+            }
+            .item{
+                height: 85px;
+                display: flex;
+                align-items: center;
+                .dot{
+                    width:50px;
+                    height: 4px;
+                    background-image: linear-gradient(to right, #107DEE 0%, #107DEE 80%, transparent 50%);
+                    background-size: 14px 2px;
+                    background-repeat: repeat-x;
+                }
+                .circle{
+                    width:61px;
+                    height:61px;
+                    background:rgba(16,125,238,1);
+                    font-size: 1.8rem;
+                    border-radius:50%;
+                    color: #ffffff;
+                    border: 4px solid #b7d8fa;
+                    line-height: 61px;
+                    text-align:center;
+                }
+                .text{
+                    margin-left: 30px;
+                    width:246px;
+                    // display: flex;
+                    // flex-direction: column;
+                    // align-items: center;
+                    .time{
+                        font-size:1.3rem;
+                        color:#787878;
+                    }
+                    .txt{
+                        font-size:20px;
+                        font-family:Microsoft YaHei;
+                        font-weight:400;
+                        color:#787878;
+                        line-height:29px;
+                    }
 
-        }
-        p{
-            font-weight:400;
-            line-height:40px;
-            font-size: 1.3rem;
+                }
+                &:nth-child(2n+1){
+                    .text{
+                        text-align: left;
+                        margin-left: 0px;
+                        margin-right: 30px;
+                    }
+                    .time{
+                        width: 100%;
+                        text-align: right;
+                    }
+                    .txt{
+                        text-indent: 2rem;
+                        text-align: right;
+                    }
+                }
+                 &:nth-child(5){
+                    .txt{
+                        text-indent: 2rem;
+                        width:160px;
+                        height:48px;
+                        font-size:20px;
+                        font-weight:400;
+                        line-height:28px;
+                    }
+                 }
+            }
         }
     }
-    .right{
-        text-align: center;
-        margin-top: 130px;
-        margin-left: 236px;
-        width:467px;
-        height:162px;
-        color:rgba(255,255,255,1);
-        line-height:40px;
-        h3{
-            font-size: 2.4rem;
-            margin-bottom: 30px;
-        }
-        p{
-            font-weight:400;
-            font-size: 1.2rem;
-        }
-    }
+   
 }
 .box-6{
     display: flex;

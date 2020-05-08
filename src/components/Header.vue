@@ -1,5 +1,5 @@
 <template>
-    <div class="header" :style="{backgroundImage:bgImg}">
+    <div class="header" :style="{background:bgImg}">
       <div height="100" class="header-box">
         <el-row class="box">
           <el-col :span="5" class="logo">
