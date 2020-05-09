@@ -1,6 +1,6 @@
 <template>
     <div class="fixedLayout">
-        <Header></Header>
+        <Header bgImg="#2c81d9"></Header>
         <div class="wrapper-1">
             <div class="box-1" style="text-align:center;width:1100px;">
                 <h3>停车找位占位服务专家</h3>
@@ -9,17 +9,15 @@
             </div>
         </div>
         <div class="wrapper-2">
-            <div class="box-2">
-                <div class="item" v-for="o in 4" :key="o">
+            <div class="box-2" :class="{isNotcenter:newsList.length>3}">
+                <div class="item" v-for="(item,i) in newsList" :key="i" >
                     <div class="item_header">
-                        <h3>新科技</h3>
-                        <p>构建智慧未来</p>
-                        <a href="">了解更多</a>
+                        <img :src="item.imgSrc" alt="">
                     </div>
                     <div class="item_bottom">
-                        <p>人一生应有五车，你有几车？</p>
-                        <p>车，已经逐渐成为我们生活中不可或缺的一部分，也是占据大部分家庭很</p>
-                        <time>20909.25</time>
+                        <p>{{item.title}}</p>
+                        <p>{{item.content}}</p>
+                        <time>{{item.contentTime}}</time>
                     </div>
                 </div>
             </div>
@@ -27,11 +25,11 @@
         <div class="wrapper-3">
             <h4>公司荣誉</h4>
             <div class="box-3">
-                <div class="item" v-for="item in 6" :key="item">
+                <div class="item" v-for="(item,i) in certificateList" :key="i">
                     <div>
-
+                        <img :src="item.imgUrl" alt="">
                     </div>
-                    <p>2018中国年度互联网优秀奖</p>
+                    <p>{{item.title}}</p>
                 </div>
             </div>
         </div>
@@ -39,16 +37,33 @@
     </div>
 </template>
 <script>
+import request from "@/api/request"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 export default{
     data(){
         return{
-
+            newsList:[],
+            certificateList:[]
         }
     },
     methods:{
-
+        findNews(){
+            request.news('findList').then(res=>{
+                console.log(1,res)
+                this.newsList = res.data
+            })
+        },
+        findCertificate(){
+            request.certificate("findAll").then(res=>{
+                console.log(2,res)
+                this.certificateList = res.data
+            })
+        }
+    },
+    created(){
+        this.findNews()
+        this.findCertificate()
     },
     components:{
         Header,Footer
@@ -68,7 +83,6 @@ export default{
 
 .wrapper-1{
     height:559px;
-    background: red;
     overflow: hidden;
     .box-1{
         display: flex;
@@ -99,12 +113,14 @@ export default{
    overflow: hidden;
    .box-2{
        display: flex;
+       justify-content: center;
+
        width: 1200px;
        margin: 0 auto;
        padding-top: 67px;
        box-sizing: border-box;
        overflow-y: hidden;
-       overflow-x: scroll;
+       overflow-x: auto;
        .item{
            height: 432px;
            width: 369px;
@@ -112,10 +128,9 @@ export default{
            flex-basis: 1;
            .item_header{
                width: 369px;
-               height: 236px;
+               height: 234px;
                background: #ccc;
                box-sizing: border-box;
-               padding:40px 35px 10px;
                color: #fff;
                h3{
                    font-size: 2rem;
@@ -134,6 +149,7 @@ export default{
                background: #fff;
                padding: 0 34px;
                box-sizing: border-box;
+               font-size: 0.9rem;
                p{
                    line-height: 32px;
                    padding-top: 8px;
@@ -145,11 +161,15 @@ export default{
                time{
                    display: block;
                    font-size:0.8rem;
+                   color: #666666;
                    margin-top:40px;
                }
            }
        }
    }
+    .isNotcenter{
+           justify-content: left;
+    }
 }
 .wrapper-3{
     height:567px;
@@ -164,7 +184,7 @@ export default{
         width: 1200px;
         margin: 0 auto;
         display: flex;
-        flex-wrap: wrap;
+        overflow-x: auto;
         .item{
             margin-right: 46px;
             &:nth-child(3n+0){

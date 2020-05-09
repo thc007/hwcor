@@ -8,7 +8,7 @@
             <div class="wrap">
                 <div class="box-2 box">
                     <h3>公司简介</h3>
-                    <div>
+                    <div v-html="introText" class="intro">
                         <p>
                                 深圳市豪位科技有限公司，是一家深耕于车位精细化管理的高科技物联网公司。本着“停车找位服务专家”的宗旨，响应国家发改委的号召，积极参与建设和运营停车资源，推动停车智能化信息化。致力于以共享经济实践响应中国“互联网+”的创新战略，解决中国的停车交通和环保挑战，建设高效、可持续的移动出行新生态。</p>
        <p>公司注册商标“小二占位”，意寓着我们是专注为车主提供停车找位占位服务的服务商。公司技术团队经过数年的自主研发，运用大数据驱动的深度学习技术，开发了人车位智联互通系统，完美实现了与停车场信息管理系统的互联互通，并以车位锁作为切入点，打造以车位为核心切入点的停车产品链，主要包含预约停车、找空位两大业务功能，运用了前沿的室内导航技术用以支撑室内导航和反向寻车，提升车主停车体验。</p>
@@ -76,6 +76,7 @@
 <script>
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import request from "@/api/request"
 export default {
     data(){
         return {
@@ -88,17 +89,39 @@ export default {
                 {time:"2019/08",txt:"深圳湾科技生态园项目落地"},
                 {time:"2019/12",txt:"万象城、海岸城天河城、徐家汇启动天使轮融资"},
                 
-            ]
+            ],
+            introText:""
         }
     },
     methods:{
-
+        findIntro(){
+            request.intro("findOneIntro").then(res=>{
+                this.introText = res.data.intro_text
+            })
+        }
     },
     components:{
         Header,Footer
+    },
+    created(){
+        this.findIntro()
     }
 }
 </script>
+<style lang="less" >
+.intro{
+
+    p{
+        line-height: 42px;
+        width: 1187px;
+        color:#333333;
+        text-indent: 2rem;
+        &:first-child{
+            text-indent: 0rem;
+        }
+    }
+}
+</style>
 <style lang="less" scoped>
 .fixedLayout {
   padding-top: 100px;
@@ -143,17 +166,9 @@ export default {
                 font-size: 1.8rem;
                 color: #333333;
                 font-weight: 700;
-                margin-bottom: 50px;
+                margin-bottom: 40px;
             }
-            &>p{
-                line-height: 42px;
-                width: 1187px;
-                color:#333333;
-                text-indent: 2rem;
-                &:first-child{
-                    text-indent: 0rem;
-                }
-            }
+
             .bottom{
                 position: relative;
                 width:1199px;
@@ -245,6 +260,7 @@ export default {
             position: relative;
             .item_wrap{
                 position: absolute;
+                top: 60px;
             }
             .item{
                 height: 85px;
@@ -304,12 +320,12 @@ export default {
                 }
                  &:nth-child(5){
                     .txt{
-                        text-indent: 2rem;
-                        width:160px;
-                        height:48px;
-                        font-size:20px;
-                        font-weight:400;
-                        line-height:28px;
+                        text-indent: 6rem;
+                        // width:160px;
+                        // height:48px;
+                        // font-size:20px;
+                        // font-weight:400;
+                        // line-height:28px;
                     }
                  }
             }
