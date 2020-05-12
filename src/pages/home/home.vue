@@ -24,8 +24,8 @@
         </div>
         <div class="wrapper-3">
             <h4>公司荣誉</h4>
-            <div class="box-3">
-                <div class="item" v-for="(item,i) in certificateList" :key="i">
+            <div class="box-3 " :class="{isCertificate:certificateList.length>3}">
+                <div class="item" v-for="(item,i) in certificateList" :key="i" >
                     <div>
                         <img :src="item.imgUrl" alt="">
                     </div>
@@ -185,6 +185,7 @@ export default{
         margin: 0 auto;
         display: flex;
         overflow-x: auto;
+        justify-content: center;
         .item{
             margin-right: 46px;
             &:nth-child(3n+0){
@@ -200,6 +201,9 @@ export default{
                 text-align: center;
             }
         }
+    }
+    .isCertificate{
+        justify-content: left;
     }
 }
 

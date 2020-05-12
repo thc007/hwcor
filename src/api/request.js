@@ -10,5 +10,8 @@ export default {
     }),
     certificate:axios.create({
         baseURL:baseURL+"certificate"
+    }),
+    patent:axios.create({
+        baseURL:baseURL+"patent"
     })
 }

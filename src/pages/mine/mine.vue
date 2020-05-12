@@ -38,8 +38,8 @@
             <div class="box-3 box">
                 <h3>核心专利</h3>
                 <div class="content_box">
-                    <div class="item" v-for="item in 3" :key="item">
-                        <img src="/static/img2.0/patent.png" alt="核心专利">
+                    <div class="item" v-for="(item,i) in patentList" :key="i">
+                        <img :src="item.imgUrl" alt="核心专利">
                     </div>
                 </div>
             </div>
@@ -90,21 +90,30 @@ export default {
                 {time:"2019/12",txt:"万象城、海岸城天河城、徐家汇启动天使轮融资"},
                 
             ],
-            introText:""
+            introText:"",
+            patentList:[]
         }
     },
     methods:{
         findIntro(){
             request.intro("findOneIntro").then(res=>{
-                this.introText = res.data.intro_text
+                this.introText = res.data.introText
             })
-        }
+        },
+        getPatentList(){
+            request.patent("getList").then(res=>{
+                console.log(res)
+                this.patentList = res.data
+            })
+        },
+
     },
     components:{
         Header,Footer
     },
     created(){
         this.findIntro()
+        this.getPatentList()
     }
 }
 </script>
