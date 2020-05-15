@@ -10,8 +10,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component:Home
-      // component: resolve=>require(["@/pages/home/home"],resolve)
+      // component:Home
+      component: resolve=>require(["@/pages/home/home"],resolve)
     },
     {
       path:"/home",

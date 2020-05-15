@@ -22,7 +22,7 @@
               <el-col :span="4.8"><div  @click="scroll_footer">社会价值</div></el-col>
               <el-col :span="4.8"><div  @click="Contact_Us">联系我们</div></el-col> -->
             </el-row>
-            <div>服务热线 400-100-1313</div>
+            <div class="phone">服务热线 400-100-1313</div>
           </el-col>
         </el-row>
       </div>
@@ -78,10 +78,13 @@ export default{
       background: #c3dcf5;
       color: #fff;
     }
+    .phone{
+      font-size: 20px;
+    }
     .nav-box div {
         height: 80px;
         line-height: 80px;
-        font-size: .9rem;
+        font-size: 0.9rem;
         min-width: 150px;
         text-align: center;
         cursor: pointer;

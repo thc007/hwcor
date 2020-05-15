@@ -11,17 +11,19 @@
         <div class="wrapper-2">
             <div class="box-2" :class="{isNotcenter:newsList.length>3}">
                 <div class="item" v-for="(item,i) in newsList" :key="i" >
-                    <div class="item_header">
-                        <img :src="item.imgSrc" alt="">
-                    </div>
-                    <div class="item_bottom">
-                        <p>{{item.title}}</p>
-                        <p class="content">{{item.content}}</p>
-                        <time>{{item.contentTime}}</time>
-                    </div>
+                        <div class="item_header">
+                            <img :src="item.imgSrc" alt="">
+                        </div>
+                        <div class="item_bottom">
+                            <p>{{item.title}}</p>
+                            <p class="content">{{item.content}}</p>
+                            <time>{{item.contentTime}}</time>
+                        </div>
                 </div>
             </div>
+
         </div>
+         
         <div class="wrapper-3">
             <h4>公司荣誉</h4>
             <div class="box-3 " :class="{isCertificate:certificateList.length>3}">
@@ -36,6 +38,7 @@
         <Footer></Footer>
     </div>
 </template>
+
 <script>
 import request from "@/api/request"
 import Header from "@/components/Header"
@@ -76,7 +79,7 @@ export default{
 </script>
 <style lang="less" scoped>
 .fixedLayout {
-  padding-top: 130px;
+  padding-top: 80px;
   min-width: 1024px;
   margin:0px auto;
 }
@@ -108,6 +111,7 @@ export default{
             margin-top: 60px;
             line-height: 47px;
             font-size: 20px;
+            width: 1100px;
         }
         a{
             margin-top: 90px;
@@ -118,22 +122,21 @@ export default{
 }
 .wrapper-2{
    background:rgba(243,245,246,1);
-   height: 590px;
-   overflow: hidden;
+   height: 600px;
    .box-2{
-       display: flex;
-       justify-content: center;
-       width: 1200px;
-       margin: 0 auto;
-       padding-top: 67px;
-       box-sizing: border-box;
-       overflow-y: hidden;
-       overflow-x: auto;
+        display: flex;
+        margin: 0 auto;
+        width: 1200px;
+        height: 469px;
+        padding-top: 67px;
+        // box-sizing: border-box;
+        overflow-x:scroll;
+        -ms-overflow-style:auto;
        .item{
-           height: 432px;
-           width: 369px;
-           margin-right: 44px;
-           flex-basis: 1;
+            flex-shrink:0;
+            height: 432px;
+            margin-right: 24px;
+            width: 369px;
            img{
                width: 100%;
                height: 100%;
@@ -204,11 +207,13 @@ export default{
     }
     .box-3{
         width: 1200px;
+        overflow-x: auto;
         margin: 0 auto;
         display: flex;
-        overflow-x: auto;
         justify-content: center;
+        -ms-overflow-style:auto;
         .item{
+            flex-basis: 1;
             margin-right: 46px;
             &:nth-child(3n+0){
                 margin-right: 0;
@@ -224,6 +229,7 @@ export default{
             p{
                 margin-top: 40px;
                 text-align: center;
+                font-size: 20px;
             }
         }
     }

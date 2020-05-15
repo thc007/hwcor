@@ -7,9 +7,9 @@
 ``` bash
 # install dependencies
 npm install
-#修改依赖flexible.js
 ```
 ``` javascript
+// 修改依赖flexible.js
     function refreshRem(){
         var width = docEl.getBoundingClientRect().width;
         if (width / dpr > 540) {

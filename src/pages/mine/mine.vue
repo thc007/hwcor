@@ -118,12 +118,12 @@ export default {
 </script>
 <style lang="less" >
 .intro{
-
     p{
         line-height: 42px;
         width: 1187px;
         color:#333333;
         text-indent: 2rem;
+        font-size: 20px;
         &:first-child{
             text-indent: 0rem;
         }
@@ -132,7 +132,7 @@ export default {
 </style>
 <style lang="less" scoped>
 .fixedLayout {
-  padding-top: 100px;
+  padding-top: 80px;
   width: 100%;
   margin:0px auto;
 }
@@ -145,6 +145,7 @@ export default {
         left: 50%;
         top: 0;
         margin-left: -960px;
+        width: 1920px;
 }
 .wrapper{
     position: relative;
@@ -245,6 +246,7 @@ export default {
           width: 1200px;
           box-sizing: border-box;
           overflow-y: hidden;
+          -ms-overflow-style:auto;
           .item{
               flex-basis: 1;
               div
