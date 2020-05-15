@@ -1,8 +1,8 @@
 <template>
     <div class="fixedLayout">
-        <Header bgImg="url(/static/img2.0/图@2x.png)"></Header>
+        <Header :bgImg='"url("+img6+")"'></Header>
         <div class="wrapper-1">
-            <img src="/static/img2.0/图@2x.png" alt="" class="content-bg-img">
+            <img src="../../../static/img2.0/图@2x.png" alt="" class="content-bg-img">
             <div class="wrap">
                 <div class="box-1 box">
                     <div class="item" v-for="( item ,i) in navList" :key="i">
@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="wrapper-2">
-            <img  class="content-bg-img" src="/static/img2.0/wrapper-2.png" alt="">
+            <img  class="content-bg-img" src="../../../static/img2.0/wrapper-2.png" alt="">
             <div class="wrap">
                 <div class="box-2 box">
                     <div class="top">
@@ -27,15 +27,15 @@
                     </div>
                     <div class="center">
                         <div class="item">
-                            <img src="/static/img2.0/peak.png" alt="">
+                            <img src="../../../static/img2.0/peak.png" alt="">
                             <p>错峰包月</p>
                         </div>
                         <div class="item">
-                            <img src="/static/img2.0/group.png" alt="">
+                            <img src="../../../static/img2.0/group.png" alt="">
                             <p>集团车位</p>
                         </div>
                                             <div class="item">
-                            <img src="/static/img2.0/voice_reserve.png" alt="">
+                            <img src="../../../static/img2.0/voice_reserve.png" alt="">
                             <p>语音预约</p>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="wrapper-3 wrapper">
-            <img src="/static/img2.0/wrapper-3.png" alt="" class="content-bg-img">
+            <img src="../../../static/img2.0/wrapper-3.png" alt="" class="content-bg-img">
             <div class="wrap">
                 <div class="box-3 box">
                     <div class="left">
@@ -66,11 +66,11 @@
             </div>
         </div>
         <div class="wrapper" style="height:1269px">
-            <img src="/static/img2.0/wrapper-4.png" alt="" class="content-bg-img">
+            <img src="../../../static/img2.0/wrapper-4.png" alt="" class="content-bg-img">
 
         </div>
         <div class="wrapper" style="height:1269px;margin-top:-2px;">
-            <img src="/static/img2.0/wrapper-5.png" alt="" class="content-bg-img">
+            <img src="../../../static/img2.0/wrapper-5.png" alt="" class="content-bg-img">
             <div class="wrap-g">
                 <div class="box-5 box">
                     <div class="left">
@@ -85,7 +85,7 @@
             </div>
         </div>
         <div class="wrapper" style="height:1269px">
-            <img src="/static/img2.0/wrapper-6.png" alt="" class="content-bg-img">
+            <img src="../../../static/img2.0/wrapper-6.png" alt="" class="content-bg-img">
             <div class="wrap-g">
                 <div class=" box-6 box">
                     <div class="left">
@@ -100,10 +100,10 @@
             </div>
         </div>
         <div class="wrapper" style="height:1024px">
-            <img src="/static/img2.0/wrapper-7.png" alt="" class="content-bg-img">
+            <img src="../../../static/img2.0/wrapper-7.png" alt="" class="content-bg-img">
         </div>
         <div class="wrapper" style="height:832px">
-            <img src="/static/img2.0/wrapper-8.png" alt="" class="content-bg-img">
+            <img src="../../../static/img2.0/wrapper-8.png" alt="" class="content-bg-img">
             <div class="wrap-g">
                 <div class="box-8 box">
                     <div class="top">
@@ -112,15 +112,15 @@
                     </div>
                     <div class="bottom">
                         <div class="item">
-                            <img src="/static/img2.0/footer_img_01.png" alt="">
+                            <img src="../../../static/img2.0/footer_img_01.png" alt="">
                             <p>无人值守的停车模式</p>
                         </div>
                         <div class="item">
-                            <img src="/static/img2.0/footer_img_03.png" alt="">
+                            <img src="../../../static/img2.0/footer_img_03.png" alt="">
                             <p>高强度设备锁车</p>
                         </div>
                         <div class="item">
-                            <img src="/static/img2.0/footer_img_02.png" alt="">
+                            <img src="../../../static/img2.0/footer_img_02.png" alt="">
                             <p>车主泊车后可自行离开</p>
                         </div>
                     </div>
@@ -133,15 +133,22 @@
 <script>
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import img1 from '../../../static/img2.0/reserve.png'
+import img2 from "../../../static/img2.0/parking_nav.png"
+import img3 from "../../../static/img2.0/reverse_nav.png"
+import img4 from "../../../static/img2.0/look_place.png"
+import img5 from "../../../static/img2.0/null_pay.png"
+import img6 from "../../../static/img2.0/图@2x.png"
 export default {
     data(){
         return {
+            img6,
             navList:[
-                {url:"/static/img2.0/reserve.png",label:"预约车位"},
-                {url:"/static/img2.0/parking_nav.png",label:"场内导航"},
-                {url:"/static/img2.0/reverse_nav.png",label:"反向寻车"},
-                {url:"/static/img2.0/look_place.png",label:"找空位"},
-                {url:"/static/img2.0/null_pay.png",label:"无感支付"},
+                {url:img1,label:"预约车位"},
+                {url:img2,label:"场内导航"},
+                {url:img3,label:"反向寻车"},
+                {url:img4,label:"找空位"},
+                {url:img5,label:"无感支付"},
             ]
         }
     },

@@ -2,7 +2,7 @@
     <div class="fixedLayout">
         <Header bgImg="#0F6FDE"></Header>
         <div class="wrapper-1">
-            <img src="/static/img2.0/mine-01.png" alt="" class="content-bg-img">
+            <img src="../../../static/img2.0/mine-01.png" alt="" class="content-bg-img">
         </div>
         <div class="wrapper-2">
             <div class="wrap">
@@ -22,7 +22,7 @@
                     <div class="position_box">
                         <div>
                             <h4>企业文化</h4>
-                            <p>热情&nbsp&nbsp&nbsp&nbsp创新&nbsp&nbsp&nbsp&nbsp专业&nbsp&nbsp&nbsp&nbsp执着</p>
+                            <p>热情&nbsp;&nbsp;&nbsp;&nbsp;创新&nbsp;&nbsp;&nbsp;&nbsp;专业&nbsp;&nbsp;&nbsp;&nbsp;执着</p>
                         </div>
                         <div>
                             <h4>企业愿景</h4>
@@ -39,7 +39,10 @@
                 <h3>核心专利</h3>
                 <div class="content_box">
                     <div class="item" v-for="(item,i) in patentList" :key="i">
-                        <img :src="item.imgUrl" alt="核心专利">
+                        <div>
+                            <p>{{item.title}}</p>
+                          <img :src="item.imgUrl" alt="核心专利">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -234,6 +237,7 @@ export default {
     background:rgba(251,251,251,1);
     .box-3{
         padding-top: 65px;
+        
         h3{
             font-size: 1.8rem;
             color: #333333;
@@ -241,6 +245,29 @@ export default {
         .content_box{
           display: flex;
           padding-top: 65px;
+          overflow-x: auto;
+          width: 1200px;
+          box-sizing: border-box;
+          overflow-y: hidden;
+          .item{
+              flex-basis: 1;
+              div
+              {
+                  width: 390px;
+                line-height: 585px;
+                height: 585px;
+                position: relative;
+                p{
+                    position: absolute;
+                    top: 20px;
+                    width: 100%;
+                    text-align: center;
+                }
+              }
+              img{
+                  width: 100%;
+              }
+          }
         }
     }
 }

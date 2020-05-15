@@ -1,6 +1,6 @@
 import axios from 'axios'
 // import qs from "qs"
-const baseURL = "http://localhost:3000/"
+const baseURL = "http://172.16.14.64:3000/"
 export default {
     intro:axios.create({
         baseURL:baseURL+"intro",  

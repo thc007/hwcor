@@ -5,7 +5,7 @@
             <div class="box-1" style="text-align:center;width:1100px;">
                 <h3>停车找位占位服务专家</h3>
                 <p style="text-align:center">豪位科技深圳市豪位科技有限公司总部座落于深圳市南山区，是一家深耕于车位精细化管理的高科技物联网公司。本着“停车找位服务专家”的宗旨，响应国家发改委的号召，积极参与建设和运营停车资源，推动停车智能化信息化。致力于以共享经济实践响应中国“互联网+”的创新战略，解决中国的停车交通和环保挑战，建设高效、可持续的移动出行新生态。</p>
-                <a href="">了解更多</a>
+                <a href="">了解更多></a>
             </div>
         </div>
         <div class="wrapper-2">
@@ -16,7 +16,7 @@
                     </div>
                     <div class="item_bottom">
                         <p>{{item.title}}</p>
-                        <p>{{item.content}}</p>
+                        <p class="content">{{item.content}}</p>
                         <time>{{item.contentTime}}</time>
                     </div>
                 </div>
@@ -50,16 +50,20 @@ export default{
     methods:{
         findNews(){
             request.news('findList').then(res=>{
-                console.log(1,res)
                 this.newsList = res.data
             })
         },
         findCertificate(){
             request.certificate("findAll").then(res=>{
-                console.log(2,res)
                 this.certificateList = res.data
             })
         }
+    },
+    watch: {
+    '$route' (to, from) {
+      console.log(to)
+      // 对路由变化作出响应...
+    }
     },
     created(){
         this.findNews()
@@ -91,10 +95,12 @@ export default{
         justify-content: center;
         margin: 0 auto;
         h3{
-            margin-top: 137px;
-            font-style:italic;
-            color:rgba(0,0,0,1);
-            font-size:2rem;
+            margin-top: 110px;
+            // font-style:italic;
+            color:#1D88FF;
+            font-size:2.5rem;
+            letter-spacing: .5rem;
+            font-weight: 700;
         }
         p{
             margin: 0 auto;
@@ -103,7 +109,8 @@ export default{
         }
         a{
             margin-top: 90px;
-            font-size: 0.8rem;
+            font-size: 1.1rem;
+            color: #1D88FF;
         }
     }
 }
@@ -114,7 +121,6 @@ export default{
    .box-2{
        display: flex;
        justify-content: center;
-
        width: 1200px;
        margin: 0 auto;
        padding-top: 67px;
@@ -126,6 +132,10 @@ export default{
            width: 369px;
            margin-right: 44px;
            flex-basis: 1;
+           img{
+               width: 100%;
+               height: 100%;
+           }
            .item_header{
                width: 369px;
                height: 234px;
@@ -154,15 +164,25 @@ export default{
                    line-height: 32px;
                    padding-top: 8px;
                    &:first-child{
-                    padding-top:20px
+                    padding-top:20px;
+                    font-weight: 700;
+  
                    }
+                }   
+                .content{
+                    overflow:hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp:3;
+                    -webkit-box-orient: vertical;
+                    height: 100px;
+                }
 
-               }
                time{
                    display: block;
                    font-size:0.8rem;
                    color: #666666;
-                   margin-top:40px;
+                   padding-top:10px;
                }
            }
        }
@@ -191,10 +211,13 @@ export default{
             &:nth-child(3n+0){
                 margin-right: 0;
             }
+            img{
+                height: 100%;
+            }
             div{
                 width:368px;
-            height:244px;
-            background:rgba(0,82,217,1);
+                height:244px;
+                text-align: center;
             }
             p{
                 margin-top: 40px;

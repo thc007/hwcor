@@ -4,18 +4,18 @@
         <el-row class="box">
           <el-col :span="5" class="logo">
               <a href="http://www.hwcor.com">
-                <img src="/static/img2.0/www.hwcor.com.png"  />
+                <img src="../../static/img2.0/www.hwcor.com.png"  />
               </a>
           </el-col>
           <el-col :span="19" class="nav-wrap">
             <el-row class="nav-box">
-                <div>
+                <div :class="{active:router=='/home'}"><router-link to="/home">  首页</router-link></div>
+                <!-- <div>
                  <router-link to="/mine">  公司简介</router-link>
-                </div>
-                <!-- <div><router-link to="/mine">  解决方案</router-link></div> -->
-                <div><router-link to="/subtoll">  产品功能介绍</router-link></div>
+                </div> -->
+                <div  :class="{active:router=='/subtoll'}"><router-link to="/subtoll">  产品功能介绍</router-link></div>
                 <!-- <div><router-link to="/mine">  战略合作伙伴</router-link></div> -->
-                <div><router-link to="/mine">  关于我们</router-link></div>
+                <div :class="{active:router=='/mine'}"><router-link to="/mine">  关于我们</router-link></div>
               <!-- <el-col :span="4.8"><div  @click="scroll_detail">公司简介 </div></el-col>
               <el-col :span="4.8"><div  @click="scroll_reject"> 解决方案</div></el-col>
               <el-col :span="4.8"><div  @click="scroll_kills">产品功能介绍</div></el-col>
@@ -30,14 +30,19 @@
 </template>
 <script>
 export default{
-    props:["bgImg"]
+    data(){
+      return{
+        router:this.$route.path
+      }
+    },
+    props:["bgImg"],
 }
 </script>
 <style lang="less" scoped>
 .header-box {
   width: 1200px;
   margin: auto;
-  height: 100px;
+  height: 80px;
 }
 .nav-wrap{
     display: flex;
@@ -60,7 +65,7 @@ export default{
 //   margin: 0 auto;
   .nav-box {
     width: 684px;
-    height: 100px;
+    height: 80px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-around;
@@ -69,18 +74,28 @@ export default{
         background: #c3dcf5;
         color: #fff;
     }
+    .active{
+      background: #c3dcf5;
+      color: #fff;
+    }
     .nav-box div {
-        height: 100px;
-        line-height: 100px;
+        height: 80px;
+        line-height: 80px;
         font-size: .9rem;
+        min-width: 150px;
+        text-align: center;
         cursor: pointer;
         a{
           color:#fff;
+          width: 100%;
+          height: 100%;
+          display: inline-block;
         }
     }
     .logo {
         display: inline-block;
-        padding-top: 24px;
+        height: 80px;
+        line-height: 80px;
     }
 }
 
