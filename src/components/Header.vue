@@ -59,8 +59,8 @@ export default{
   left: 50%;
   top: 0;
   color:  #fff;
-  width: 100%;
-  max-width: 1920px;
+  width: 1920px;
+  background-size:100%!important;
   transform: translateX(-50%);
 //   margin: 0 auto;
   .nav-box {

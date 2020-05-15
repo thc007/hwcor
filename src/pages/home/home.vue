@@ -1,8 +1,8 @@
 <template>
     <div class="fixedLayout">
-        <Header bgImg="#2c81d9"></Header>
+        <Header bgImg="#0F6FDE"></Header>
         <div class="wrapper-1">
-            <div class="box-1" style="text-align:center;width:1100px;">
+            <div class="box-1" >
                 <h3>停车找位占位服务专家</h3>
                 <p style="text-align:center">豪位科技深圳市豪位科技有限公司总部座落于深圳市南山区，是一家深耕于车位精细化管理的高科技物联网公司。本着“停车找位服务专家”的宗旨，响应国家发改委的号召，积极参与建设和运营停车资源，推动停车智能化信息化。致力于以共享经济实践响应中国“互联网+”的创新战略，解决中国的停车交通和环保挑战，建设高效、可持续的移动出行新生态。</p>
                 <a href="">了解更多></a>
@@ -81,7 +81,7 @@ export default{
   margin:0px auto;
 }
 .box{
-    width: 1200px;
+    width: 1440px;
     margin:0px auto;
 }
 
@@ -89,6 +89,7 @@ export default{
     height:559px;
     overflow: hidden;
     .box-1{
+        text-align:center;width:1100px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -106,6 +107,7 @@ export default{
             margin: 0 auto;
             margin-top: 60px;
             line-height: 47px;
+            font-size: 20px;
         }
         a{
             margin-top: 90px;
@@ -229,5 +231,4 @@ export default{
         justify-content: left;
     }
 }
-
 </style>

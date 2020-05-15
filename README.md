@@ -7,7 +7,20 @@
 ``` bash
 # install dependencies
 npm install
-
+#修改依赖flexible.js
+```
+``` javascript
+    function refreshRem(){
+        var width = docEl.getBoundingClientRect().width;
+        if (width / dpr > 540) {
+            width = width * dpr;
+        }
+        var rem = width / 100;
+        docEl.style.fontSize = rem + 'px';
+        flexible.rem = win.rem = rem;
+    }
+```
+``` bash
 # serve with hot reload at localhost:8080
 npm run dev
 

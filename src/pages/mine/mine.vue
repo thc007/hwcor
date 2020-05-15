@@ -47,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div  style="height:999px">
+        <div  class="wrapper-4">
             <div class="box-4 box">
                 <h3>成长历程</h3>
                 <div class="content_box">
@@ -55,10 +55,6 @@
                     <div class="center">
                         <div class="item_wrap">
 
-                            <!-- <div class="item" v-for="item in 5" :key="item" :style="{top:84*item+'px',left:item%2==1?-55+'px':10+'px',flexDirection:item%2==1?'row-reserse':'row'}">
-                                <div class="dot">22</div>
-                                <div class="circle">{{item>10?('0'+(item+1)):item}}</div>
-                            </div> -->
                             <div class="item" v-for="(o,item) in list" :key="item" :style="{transform:item%2==1?'':'translateX(-100%)',flexDirection:item%2==1?'row':'row-reverse'}">
                                 <div class="dot"></div>
                                 <div class="circle">{{item<10?('0'+(item+1)):item}}</div>
@@ -137,7 +133,7 @@ export default {
 <style lang="less" scoped>
 .fixedLayout {
   padding-top: 100px;
-  min-width: 1024px;
+  width: 100%;
   margin:0px auto;
 }
 .box{
@@ -270,6 +266,9 @@ export default {
           }
         }
     }
+}
+.wrapper-4{
+height:999px
 }
 .box-4{
     padding-top: 60px;

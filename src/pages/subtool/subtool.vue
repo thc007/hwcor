@@ -1,7 +1,7 @@
 <template>
     <div class="fixedLayout">
         <Header :bgImg='"url("+img6+")"'></Header>
-        <div class="wrapper-1">
+        <div class="wrapper-1 wrapper">
             <img src="../../../static/img2.0/图@2x.png" alt="" class="content-bg-img">
             <div class="wrap">
                 <div class="box-1 box">
@@ -12,7 +12,7 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper-2">
+        <div class="wrapper-2 wrapper">
             <img  class="content-bg-img" src="../../../static/img2.0/wrapper-2.png" alt="">
             <div class="wrap">
                 <div class="box-2 box">
@@ -65,11 +65,11 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper" style="height:1269px">
+        <div class="wrapper wrapper-4" >
             <img src="../../../static/img2.0/wrapper-4.png" alt="" class="content-bg-img">
 
         </div>
-        <div class="wrapper" style="height:1269px;margin-top:-2px;">
+        <div class="wrapper wrapper-5" >
             <img src="../../../static/img2.0/wrapper-5.png" alt="" class="content-bg-img">
             <div class="wrap-g">
                 <div class="box-5 box">
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper" style="height:1269px">
+        <div class="wrapper wrapper-6" >
             <img src="../../../static/img2.0/wrapper-6.png" alt="" class="content-bg-img">
             <div class="wrap-g">
                 <div class=" box-6 box">
@@ -99,10 +99,10 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper" style="height:1024px">
+        <div class="wrapper wrapper-7" >
             <img src="../../../static/img2.0/wrapper-7.png" alt="" class="content-bg-img">
         </div>
-        <div class="wrapper" style="height:832px">
+        <div class="wrapper wrapper-8">
             <img src="../../../static/img2.0/wrapper-8.png" alt="" class="content-bg-img">
             <div class="wrap-g">
                 <div class="box-8 box">
@@ -196,7 +196,8 @@ export default {
 }
 .fixedLayout {
   padding-top: 100px;
-  min-width: 1024px;
+  width: 100%;
+
   margin:0px auto;
 }
 .box{
@@ -208,6 +209,7 @@ export default {
         left: 50%;
         top: 0;
         margin-left: -960px;
+        width: 1920px;
 }
 .wrapper{
     position: relative;
@@ -309,6 +311,7 @@ export default {
 }
 .wrapper-3{
     margin-top: -2px;
+    height: 1269px;
     .wrap{
         position: relative;
         left: 0;
@@ -319,7 +322,7 @@ export default {
         display: flex;
         .left{
             p{
-                width:329px;
+            width:329px;
             height:83px;
             font-size:30px;
             font-weight:400;
@@ -354,6 +357,21 @@ export default {
             }
         }
     }
+}
+.wrapper-4{
+height:1269px;
+}
+.wrapper-5{
+    height:1269px;margin-top:-2px;
+}
+.wrapper-6{
+height:1269px;
+}
+.wrapper-7{
+    height:1024px;
+}
+.wrapper-8{
+height:832px
 }
 .box-5{
     display: flex;
