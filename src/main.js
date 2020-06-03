@@ -7,9 +7,14 @@ import 'lib-flexible'
 import 'babel-polyfill'
 import 'es6-promise/auto'
 import cssVars from 'css-vars-ponyfill'
+
 cssVars({})
 import { Row, Col, Carousel,CarouselItem,Container,Footer,Header,Aside,Image, Main,Collapse,CollapseItem} from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+// require styles
+import './assets/style/swiper.css' 
+Vue.use(VueAwesomeSwiper, /* { default global options } */)
 Vue.use(Image)
 Vue.use(Main)
 Vue.use(Container)

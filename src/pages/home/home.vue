@@ -9,8 +9,8 @@
             </div>
         </div>
         <div class="wrapper-2">
-            <div class="box-2" :class="{isNotcenter:newsList.length>3}">
-                <div class="item" v-for="(item,i) in newsList" :key="i" >
+            <div class="box-2">
+                <!-- <div class="item" v-for="(item,i) in newsList" :key="i" >
                         <div class="item_header">
                             <img :src="item.imgSrc" alt="">
                         </div>
@@ -19,20 +19,51 @@
                             <p class="content">{{item.content}}</p>
                             <time>{{item.contentTime}}</time>
                         </div>
-                </div>
+                </div> -->
+                <swiper :options="swiperOption" ref="mySwiper" v-if ="newsList.length">
+                    <!-- slides -->
+                    <swiper-slide v-for="(item,i) in newsList" :key="i" >
+                       <div class="item"  >
+                            <div class="item_header">
+                                <img :src="item.imgSrc" alt="">
+                            </div>
+                            <div class="item_bottom">
+                                <p>{{item.title}}</p>
+                                <p class="content">{{item.content}}</p>
+                                <time>{{item.contentTime}}</time>
+                            </div>
+                        </div>
+                    </swiper-slide>
+                    <div class="swiper-button-prev" slot="button-prev"></div>
+                    <div class="swiper-button-next" slot="button-next"></div>
+                </swiper>
             </div>
 
         </div>
          
         <div class="wrapper-3">
             <h4>公司荣誉</h4>
-            <div class="box-3 " :class="{isCertificate:certificateList.length>3}">
+            <!-- <div class="box-3 " :class="{isCertificate:certificateList.length>3}">
                 <div class="item" v-for="(item,i) in certificateList" :key="i" >
                     <div>
                         <img :src="item.imgUrl" alt="">
                     </div>
                     <p>{{item.title}}</p>
                 </div>
+            </div> -->
+            <div class="box box-3">
+                <swiper :options="swiperOption" ref="mySwiper" v-if ="certificateList.length">
+                    <!-- slides -->
+                    <swiper-slide v-for="(item,i) in certificateList" :key="i" >
+                        <div class="item" >
+                        <div>
+                            <img :src="item.imgUrl" alt="">
+                        </div>
+                        <p>{{item.title}}</p>
+                    </div></swiper-slide>
+                    <div class="swiper-button-prev" slot="button-prev"></div>
+                    <div class="swiper-button-next" slot="button-next"></div>
+                </swiper>
             </div>
         </div>
         <Footer></Footer>
@@ -47,7 +78,35 @@ export default{
     data(){
         return{
             newsList:[],
-            certificateList:[]
+            certificateList:[],
+            swiperOption: {
+                el: '.swiper-container',
+                initialSlide: 1,
+                spaceBetween: 50,
+                slidesPerView: 3,
+                centeredSlides: true,
+                slideToClickedSlide: true,
+                grabCursor: true,
+                scrollbar: {
+                el: '.swiper-scrollbar',
+                },
+                mousewheel: {
+                enabled: true,
+                },
+                keyboard: {
+                enabled: true,
+                },
+                pagination: {
+                el: '.swiper-pagination',
+                },
+                navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                },
+          // some swiper options/callbacks
+          // 所有的参数同 swiper 官方 api 参数
+          // ...
+             }
         }
     },
     methods:{
@@ -59,6 +118,7 @@ export default{
         findCertificate(){
             request.certificate("findAll").then(res=>{
                 this.certificateList = res.data
+                console.log(res.data)
             })
         }
     },
@@ -68,12 +128,21 @@ export default{
       // 对路由变化作出响应...
     }
     },
+    computed: {
+      swiper() {
+        return this.$refs.mySwiper.swiper   
+      }
+    },
     created(){
         this.findNews()
         this.findCertificate()
     },
     components:{
         Header,Footer
+    },
+    mounted(){
+        console.log( this.swiper)
+        // this.swiper.slideTo(3, 1000, false)
     }
 }
 </script>
@@ -124,13 +193,12 @@ export default{
    background:rgba(243,245,246,1);
    height: 600px;
    .box-2{
-        display: flex;
-        margin: 0 auto;
         width: 1200px;
-        height: 469px;
         padding-top: 67px;
-        // box-sizing: border-box;
-        overflow-x:scroll;
+        overflow-x: auto;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
         -ms-overflow-style:auto;
        .item{
             flex-shrink:0;

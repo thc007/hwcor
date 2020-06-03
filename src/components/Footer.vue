@@ -92,7 +92,7 @@
     color: rgba(255,255,255,.4);
     p{
         width: 1200px;
-        text-align: right;
+        text-align: center;
         line-height: 58px;
         margin: 0 auto;
         font-size: .7rem;
