@@ -337,7 +337,8 @@
       <el-row class="footer-bottom">
         © 2019 Shenzhen Haowei Technology Co.,Ltd.All rights reserved
         <br />
-        <br />粤ICP备19046392号
+        <br />
+        <a href="http://www.beian.miit.gov.cn">粤ICP备19046392号</a> 
       </el-row>
     </div>
   </div>
@@ -395,6 +396,10 @@ export default {
   text-align: center;
   color: #8997a4;
   padding: 30px 20px;
+}
+.footer-bottom a{
+  color: #8997a4;
+  text-decoration:none;
 }
 .footer-container {
   padding-left: 223px;
