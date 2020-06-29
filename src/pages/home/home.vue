@@ -22,8 +22,8 @@
                 </div> -->
                 <swiper :options="swiperOption" ref="mySwiper" v-if ="newsList.length">
                     <!-- slides -->
-                    <swiper-slide v-for="(item,i) in newsList" :key="i" >
-                       <div class="item"  >
+                    <swiper-slide v-for="(item,i) in newsList" :key="i"  >
+                       <div class="item"   @click="jumpPage(item)">
                             <div class="item_header">
                                 <img :src="item.imgSrc" alt="">
                             </div>
@@ -120,6 +120,13 @@ export default{
                 this.certificateList = res.data
                 console.log(res.data)
             })
+        },
+        jumpPage(news){
+            if(news.jumpType==""+1){
+                location.href = news.routerPath
+            }else{
+                this.$router.push(news.routerPath)
+            }
         }
     },
     watch: {
